@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "chipHighlight.png",
+      "scale" : "1x"
+    },
+    {
+      "scale" : "2x",
+      "filename" : "chipHighlight@2x.png",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "chipHighlight@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}
