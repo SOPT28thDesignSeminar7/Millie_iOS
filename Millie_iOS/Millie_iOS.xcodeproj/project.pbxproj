@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,9 @@
 		ABE44EB5264FAC1B00E0FF56 /* RuheeNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */; };
 		ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44EB8264FAC3000E0FF56 /* InaeNoteVC.swift */; };
 		ABE44EBD264FAC4E00E0FF56 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44EBC264FAC4E00E0FF56 /* UIFont+Extension.swift */; };
+		BBC25FEF26527EF00012AFA0 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */; };
+		BBC25FF22652840A0012AFA0 /* ChipTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */; };
+		BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */; };
 		CAAEBC245E0540C495357430 /* Pods_Millie_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332338A5D4E19B2A1F7C4060 /* Pods_Millie_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +38,9 @@
 		ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuheeNoteVC.swift; sourceTree = "<group>"; };
 		ABE44EB8264FAC3000E0FF56 /* InaeNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaeNoteVC.swift; sourceTree = "<group>"; };
 		ABE44EBC264FAC4E00E0FF56 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
+		BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipTableCell.swift; sourceTree = "<group>"; };
+		BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooklistTableCell.swift; sourceTree = "<group>"; };
 		C1CE98EBF8BFA4C8933C757B /* Pods-Millie_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Millie_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Millie_iOS/Pods-Millie_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +70,6 @@
 				C1CE98EBF8BFA4C8933C757B /* Pods-Millie_iOS.debug.xcconfig */,
 				343ECD8D327A061148247589 /* Pods-Millie_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -115,7 +120,8 @@
 		ABE44EA3264FAB5900E0FF56 /* Ruhee */ = {
 			isa = PBXGroup;
 			children = (
-				ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */,
+				BBC25FE026523E760012AFA0 /* VC */,
+				BBC25FDF26523E6E0012AFA0 /* Cells */,
 			);
 			path = Ruhee;
 			sourceTree = "<group>";
@@ -134,6 +140,24 @@
 				ABE44EBC264FAC4E00E0FF56 /* UIFont+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BBC25FDF26523E6E0012AFA0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */,
+				BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */,
+				BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BBC25FE026523E760012AFA0 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC25FEF26527EF00012AFA0 /* ProfileTableCell.swift in Sources */,
 				ABE44EBD264FAC4E00E0FF56 /* UIFont+Extension.swift in Sources */,
+				BBC25FF22652840A0012AFA0 /* ChipTableCell.swift in Sources */,
+				BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */,
 				ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */,
 				ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */,
 				ABE44EB5264FAC1B00E0FF56 /* RuheeNoteVC.swift in Sources */,
@@ -333,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -388,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -405,8 +432,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G7SD8523Y3;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G7SD8523Y3;
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
