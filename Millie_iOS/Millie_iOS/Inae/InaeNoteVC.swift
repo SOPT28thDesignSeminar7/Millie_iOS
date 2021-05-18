@@ -20,9 +20,9 @@ class InaeNoteVC: UIViewController {
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet var bookCaseNameLabel: UILabel!
     @IBOutlet var followerLabel: UILabel!
-    @IBOutlet var goalView: UIView!
+    @IBOutlet var goalImage: UIImageView!
     @IBOutlet var goalLabel: UILabel!
-    @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var tableView: UITableView!
 
     // MARK: - Local variables
 
@@ -42,5 +42,32 @@ class InaeNoteVC: UIViewController {
 extension InaeNoteVC {
     func setView() {
         profileImage.image = UIImage(named: "img_profile")
+
+        tableView.dataSource = self
+        tableView.delegate = self
+
+        tableView.register(InaeTagCell.self, forCellReuseIdentifier: InaeTagCell.identifier)
     }
+}
+
+// MARK: - UITableViewDataSource
+
+extension InaeNoteVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        5
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: InaeTagCell.identifier) as? InaeTagCell else { return UITableViewCell() }
+
+        return cell
+    }
+}
+
+// MARK: - UITableViewDelegate
+
+extension InaeNoteVC: UITableViewDelegate {
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        UIView()
+//    }
 }
