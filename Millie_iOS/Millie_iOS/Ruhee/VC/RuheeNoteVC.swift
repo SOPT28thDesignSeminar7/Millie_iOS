@@ -68,7 +68,7 @@ extension RuheeNoteVC: UITableViewDelegate {
         case 0:
             return 0
         default:
-            return 43
+            return 44
         }
         
     }
@@ -142,8 +142,11 @@ extension RuheeNoteVC: UITableViewDataSource {
             let header = UITableViewHeaderFooterView()
             return header
         default:
-            let header = UITableViewHeaderFooterView()
-            header.backgroundColor = .blue
+            let header = MenuHeaderView()
+            header.layer.shadowOffset = CGSize(width: 0, height: -8)
+            header.layer.shadowRadius = 6
+            header.layer.shadowColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0.26)
+            header.layer.shadowOpacity = 0.5
             return header
         }
     }

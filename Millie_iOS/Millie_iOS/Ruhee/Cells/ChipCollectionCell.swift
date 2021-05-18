@@ -11,13 +11,15 @@ class ChipCollectionCell: UICollectionViewCell {
     
     static let identifier = "ChipCollectionCell"
     
+    //MARK: - Property
+    
     let chipBtn : UIButton = {
         let btn = UIButton()
         return btn
     }()
     
-   
-    
+    //MARK: - UI
+       
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -26,7 +28,6 @@ class ChipCollectionCell: UICollectionViewCell {
         chipBtn.snp.makeConstraints { (make) in
             make.top.leading.bottom.trailing.equalToSuperview()
         }
-        
         
     }
     

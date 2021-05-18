@@ -50,6 +50,12 @@ class ProfileTableCell: UITableViewCell {
         return label
     }()
     
+    let goalImageView : UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "100Days")
+        return image
+    }()
+    
     let dayLabel : UILabel = {
         let label = UILabel()
         label.text = "43일째 "
@@ -58,7 +64,7 @@ class ProfileTableCell: UITableViewCell {
         return label
     }()
     
-    let numberoffmillieLabel : UILabel = {
+    let numberofmillieLabel : UILabel = {
         let label = UILabel()
         label.text = "8"
         label.font = UIFont.NotoSansKR(type: .bold, size: 12) // 폰트 고쳐줘야 함
@@ -115,7 +121,7 @@ class ProfileTableCell: UITableViewCell {
         btn.setImage(UIImage(named: "btnChoosbook"), for: .normal)
         return btn
     }()
-
+    
     
     //MARK: - UI
     
@@ -127,18 +133,19 @@ class ProfileTableCell: UITableViewCell {
         addSubview(nameLabel)
         addSubview(libraryLabel)
         addSubview(followLabel)
+        addSubview(goalImageView)
         
         addSubview(dayLabel)
-        addSubview(numberoffmillieLabel)
+        addSubview(numberofmillieLabel)
         addSubview(millieLabel)
         addSubview(moreBtn)
-                
+        
         addSubview(starImage)
         addSubview(favbookLabel)
         addSubview(eunLabel)
         addSubview(findandchooseLabel)
         addSubview(choosebookBtn)
-    
+        
         
         settingBtn.snp.makeConstraints { (make) in
             make.top.equalTo(-6)
@@ -166,19 +173,24 @@ class ProfileTableCell: UITableViewCell {
             make.leading.equalTo(profileImage.snp.trailing).offset(10.5)
         }
         
+        goalImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(followLabel.snp.bottom).offset(20)
+            make.leading.equalTo(96)
+        }
+        
         dayLabel.snp.makeConstraints { (make) in
             make.top.equalTo(followLabel.snp.bottom).offset(20.5)
             make.leading.equalTo(167.3)
         }
         
-        numberoffmillieLabel.snp.makeConstraints { (make) in
+        numberofmillieLabel.snp.makeConstraints { (make) in
             make.top.equalTo(followLabel.snp.bottom).offset(20.5) // 여기 폰트 가져오면 고쳐줘야 함
             make.leading.equalTo(dayLabel.snp.trailing).offset(0)
         }
         
         millieLabel.snp.makeConstraints { (make) in
             make.top.equalTo(followLabel.snp.bottom).offset(20.5)
-            make.leading.equalTo(numberoffmillieLabel.snp.trailing).offset(-1)
+            make.leading.equalTo(numberofmillieLabel.snp.trailing).offset(-1)
         }
         
         moreBtn.snp.makeConstraints { (make) in
@@ -201,7 +213,7 @@ class ProfileTableCell: UITableViewCell {
             make.leading.equalTo(favbookLabel.snp.trailing).offset(-11)
             make.bottom.equalTo(findandchooseLabel.snp.top).offset(-0.02)
         }
-
+        
         findandchooseLabel.snp.makeConstraints { (make) in
             make.leading.equalTo(25.3)
             make.bottom.equalTo(-40.4)
