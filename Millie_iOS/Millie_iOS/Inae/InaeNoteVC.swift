@@ -22,6 +22,8 @@ class InaeNoteVC: UIViewController {
 
     private lazy var headerView: UIView = {
         let view = UIView()
+        view.backgroundColor = .white
+
         let bookmark = UIImageView(image: UIImage(named: "btnFat"))
 
         view.addSubviews([myBookCaseButton, readingNoteButton, statisticsButton, bookmark])
@@ -100,6 +102,7 @@ extension InaeNoteVC {
         tableView.delegate = self
 
         tableView.register(InaeTagCell.self, forCellReuseIdentifier: InaeTagCell.identifier)
+        tableView.register(InaeBookCell.self, forCellReuseIdentifier: InaeBookCell.identifier)
     }
 }
 
@@ -117,7 +120,7 @@ extension InaeNoteVC: UITableViewDataSource {
 
             return cell
         default:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: InaeTagCell.identifier) as? InaeTagCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: InaeBookCell.identifier) as? InaeBookCell else { return UITableViewCell() }
 
             return cell
         }
