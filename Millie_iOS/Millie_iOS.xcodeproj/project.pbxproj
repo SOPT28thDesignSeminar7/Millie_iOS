@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48874080264FAFFE00997B82 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4887407F264FAFFE00997B82 /* Home.storyboard */; };
+		48874083264FB02100997B82 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48874082264FB02100997B82 /* Feed.storyboard */; };
+		48874086264FB03600997B82 /* MyLibrary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48874085264FB03600997B82 /* MyLibrary.storyboard */; };
 		ABE44E8E264FA96000E0FF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */; };
 		ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */; };
 		ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E91264FA96000E0FF56 /* ViewController.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		332338A5D4E19B2A1F7C4060 /* Pods_Millie_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Millie_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343ECD8D327A061148247589 /* Pods-Millie_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Millie_iOS.release.xcconfig"; path = "Target Support Files/Pods-Millie_iOS/Pods-Millie_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		4887407F264FAFFE00997B82 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		48874082264FB02100997B82 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		48874085264FB03600997B82 /* MyLibrary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyLibrary.storyboard; sourceTree = "<group>"; };
 		ABE44E8A264FA96000E0FF56 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,13 +64,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4887407C264FAFA800997B82 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4887407F264FAFFE00997B82 /* Home.storyboard */,
+				48874082264FB02100997B82 /* Feed.storyboard */,
+				48874085264FB03600997B82 /* MyLibrary.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4887407E264FAFC200997B82 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
 		746389489ED4D0FBA94C1EF6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				C1CE98EBF8BFA4C8933C757B /* Pods-Millie_iOS.debug.xcconfig */,
 				343ECD8D327A061148247589 /* Pods-Millie_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -123,6 +145,8 @@
 		ABE44EA4264FAB5C00E0FF56 /* Yeonseo */ = {
 			isa = PBXGroup;
 			children = (
+				4887407E264FAFC200997B82 /* VCs */,
+				4887407C264FAFA800997B82 /* Storyboard */,
 				ABE44EB1264FABF400E0FF56 /* MyBookVC.swift */,
 			);
 			path = Yeonseo;
@@ -195,9 +219,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48874083264FB02100997B82 /* Feed.storyboard in Resources */,
 				ABE44E9A264FA96200E0FF56 /* LaunchScreen.storyboard in Resources */,
 				ABE44E97264FA96200E0FF56 /* Assets.xcassets in Resources */,
 				ABE44E95264FA96000E0FF56 /* Main.storyboard in Resources */,
+				48874086264FB03600997B82 /* MyLibrary.storyboard in Resources */,
+				48874080264FAFFE00997B82 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
