@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABDAD7342652A07800862243 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */; };
+		ABDAD7352652A07800862243 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */; };
+		ABDAD7362652A07800862243 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */; };
 		ABE44E8E264FA96000E0FF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */; };
 		ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */; };
 		ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E91264FA96000E0FF56 /* ViewController.swift */; };
@@ -20,12 +23,17 @@
 		BBC25FEF26527EF00012AFA0 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */; };
 		BBC25FF22652840A0012AFA0 /* ChipTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */; };
 		BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */; };
+		BBC2600C2652DA680012AFA0 /* ChipCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2600B2652DA680012AFA0 /* ChipCollectionCell.swift */; };
+		BBC26015265374E90012AFA0 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC26014265374E90012AFA0 /* MenuHeaderView.swift */; };
 		CAAEBC245E0540C495357430 /* Pods_Millie_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332338A5D4E19B2A1F7C4060 /* Pods_Millie_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		332338A5D4E19B2A1F7C4060 /* Pods_Millie_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Millie_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343ECD8D327A061148247589 /* Pods-Millie_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Millie_iOS.release.xcconfig"; path = "Target Support Files/Pods-Millie_iOS/Pods-Millie_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		ABE44E8A264FA96000E0FF56 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,8 @@
 		BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipTableCell.swift; sourceTree = "<group>"; };
 		BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooklistTableCell.swift; sourceTree = "<group>"; };
+		BBC2600B2652DA680012AFA0 /* ChipCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipCollectionCell.swift; sourceTree = "<group>"; };
+		BBC26014265374E90012AFA0 /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		C1CE98EBF8BFA4C8933C757B /* Pods-Millie_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Millie_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Millie_iOS/Pods-Millie_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +83,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ABDAD73026529FC800862243 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */,
+				ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */,
+				ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		ABE44E81264FA96000E0FF56 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +114,7 @@
 		ABE44E8C264FA96000E0FF56 /* Millie_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				ABDAD73026529FC800862243 /* Fonts */,
 				ABE44EBB264FAC3700E0FF56 /* Extension */,
 				ABE44EA4264FAB5C00E0FF56 /* Yeonseo */,
 				ABE44EA3264FAB5900E0FF56 /* Ruhee */,
@@ -121,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC25FE026523E760012AFA0 /* VC */,
+				BBC26017265374EF0012AFA0 /* View */,
 				BBC25FDF26523E6E0012AFA0 /* Cells */,
 			);
 			path = Ruhee;
@@ -147,6 +169,7 @@
 			children = (
 				BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */,
 				BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */,
+				BBC2600B2652DA680012AFA0 /* ChipCollectionCell.swift */,
 				BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */,
 			);
 			path = Cells;
@@ -158,6 +181,14 @@
 				ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		BBC26017265374EF0012AFA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBC26014265374E90012AFA0 /* MenuHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +252,9 @@
 			files = (
 				ABE44E9A264FA96200E0FF56 /* LaunchScreen.storyboard in Resources */,
 				ABE44E97264FA96200E0FF56 /* Assets.xcassets in Resources */,
+				ABDAD7352652A07800862243 /* NotoSansKR-Medium.otf in Resources */,
+				ABDAD7342652A07800862243 /* NotoSansKR-Bold.otf in Resources */,
+				ABDAD7362652A07800862243 /* NotoSansKR-Regular.otf in Resources */,
 				ABE44E95264FA96000E0FF56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +314,9 @@
 				BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */,
 				ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */,
 				ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */,
+				BBC2600C2652DA680012AFA0 /* ChipCollectionCell.swift in Sources */,
 				ABE44EB5264FAC1B00E0FF56 /* RuheeNoteVC.swift in Sources */,
+				BBC26015265374E90012AFA0 /* MenuHeaderView.swift in Sources */,
 				ABE44E8E264FA96000E0FF56 /* AppDelegate.swift in Sources */,
 				ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */,
 				ABE44EB2264FABF400E0FF56 /* MyBookVC.swift in Sources */,
@@ -360,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -415,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,14 +468,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "inaelee.Millie-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ruhee.Millie-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,14 +489,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G7SD8523Y3;
+				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "inaelee.Millie-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ruhee.Millie-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
