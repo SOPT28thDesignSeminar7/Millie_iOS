@@ -10,6 +10,7 @@
 		ABDAD7342652A07800862243 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */; };
 		ABDAD7352652A07800862243 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */; };
 		ABDAD7362652A07800862243 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */; };
+		ABDAD77E2652E4BD00862243 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD77D2652E4BD00862243 /* Lato-Regular.ttf */; };
 		ABE44E8E264FA96000E0FF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */; };
 		ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */; };
 		ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E91264FA96000E0FF56 /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 		ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		ABDAD77D2652E4BD00862243 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		ABE44E8A264FA96000E0FF56 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */,
 				ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */,
 				ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */,
+				ABDAD77D2652E4BD00862243 /* Lato-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				ABE44E97264FA96200E0FF56 /* Assets.xcassets in Resources */,
 				ABDAD7352652A07800862243 /* NotoSansKR-Medium.otf in Resources */,
 				ABDAD7342652A07800862243 /* NotoSansKR-Bold.otf in Resources */,
+				ABDAD77E2652E4BD00862243 /* Lato-Regular.ttf in Resources */,
 				ABDAD7362652A07800862243 /* NotoSansKR-Regular.otf in Resources */,
 				ABE44E95264FA96000E0FF56 /* Main.storyboard in Resources */,
 			);
