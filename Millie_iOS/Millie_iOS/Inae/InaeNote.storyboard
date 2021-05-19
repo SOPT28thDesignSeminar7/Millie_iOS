@@ -26,11 +26,28 @@
                                         </constraints>
                                         <state key="normal" image="icSetting"/>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-Mo-mS7">
+                                        <rect key="frame" x="125" y="44.5" width="33" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EWS-Mo-mS7" secondAttribute="height" multiplier="1:1" id="pJl-2N-s4Y"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSN-7C-qGe">
+                                        <rect key="frame" x="165" y="50.5" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="88" id="95e-ir-ydH"/>
+                                    <constraint firstItem="aSN-7C-qGe" firstAttribute="leading" secondItem="EWS-Mo-mS7" secondAttribute="trailing" constant="7" id="DPA-SP-9lr"/>
+                                    <constraint firstItem="aSN-7C-qGe" firstAttribute="centerY" secondItem="EWS-Mo-mS7" secondAttribute="centerY" id="Djz-V2-zzj"/>
+                                    <constraint firstItem="EWS-Mo-mS7" firstAttribute="width" secondItem="1xJ-mx-9pJ" secondAttribute="width" multiplier="30:375" id="IGK-U0-KC2"/>
+                                    <constraint firstItem="EWS-Mo-mS7" firstAttribute="centerY" secondItem="0eJ-4d-dV1" secondAttribute="centerY" id="XWQ-0E-0Ge"/>
                                     <constraint firstAttribute="trailing" secondItem="0eJ-4d-dV1" secondAttribute="trailing" constant="8" id="a3F-Tj-s3A"/>
+                                    <constraint firstItem="EWS-Mo-mS7" firstAttribute="leading" secondItem="1xJ-mx-9pJ" secondAttribute="leading" constant="125" id="kAV-3u-44j"/>
                                     <constraint firstAttribute="bottom" secondItem="0eJ-4d-dV1" secondAttribute="bottom" id="qEa-6a-ijv"/>
                                     <constraint firstItem="0eJ-4d-dV1" firstAttribute="width" secondItem="1xJ-mx-9pJ" secondAttribute="width" multiplier="49:375" id="w3G-6c-xF0"/>
                                 </constraints>
@@ -134,6 +151,9 @@
                         <outlet property="followerLabel" destination="qrq-4f-eEn" id="IPB-P8-G98"/>
                         <outlet property="goalImage" destination="Zll-hG-hcc" id="blB-b3-fY8"/>
                         <outlet property="goalLabel" destination="Wgd-Ra-jie" id="aHa-G4-hF2"/>
+                        <outlet property="navigationBar" destination="1xJ-mx-9pJ" id="i3F-PH-HcH"/>
+                        <outlet property="navigationProfileImage" destination="EWS-Mo-mS7" id="28u-VA-hDE"/>
+                        <outlet property="navigationTitleLabel" destination="aSN-7C-qGe" id="6Z7-f4-52L"/>
                         <outlet property="profileImage" destination="8PY-eV-Stv" id="eQY-uZ-XUa"/>
                         <outlet property="tableView" destination="2he-o7-2S5" id="rLO-WZ-zPg"/>
                     </connections>
