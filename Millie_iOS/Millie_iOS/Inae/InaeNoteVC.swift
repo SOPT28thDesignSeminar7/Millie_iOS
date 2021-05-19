@@ -105,6 +105,32 @@ extension InaeNoteVC {
     func setView() {
         profileImage.image = UIImage(named: "img_profile")
 
+        bookCaseNameLabel.text = "김솝트의 서재"
+        bookCaseNameLabel.font = UIFont.NotoSansKR(type: .bold, size: 20)
+        bookCaseNameLabel.textColor = UIColor.fontEmphasis
+
+        let bookAttr = NSMutableAttributedString(string: bookCaseNameLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .bold, size: 20)])
+        bookAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 20)], range: (bookCaseNameLabel.text! as NSString).range(of: "의 서재"))
+
+        bookCaseNameLabel.attributedText = bookAttr
+
+        followerLabel.text = "팔로잉 0 • 팔로워 0"
+        followerLabel.font = UIFont.NotoSansKR(type: .bold, size: 12)
+        followerLabel.textColor = UIColor.fontMainColor
+        let followerAttr = NSMutableAttributedString(string: followerLabel.text!)
+        followerAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12)], range: (followerLabel.text! as NSString).range(of: "팔로잉"))
+        followerAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12)], range: (followerLabel.text! as NSString).range(of: "팔로워"))
+        followerLabel.attributedText = followerAttr
+
+//        goalImage.image = UIImage(named: <#T##String#>)
+
+        goalLabel.text = "43일째 8밀리"
+        goalLabel.textColor = UIColor.fontMainColor
+
+        let goalAttr = NSMutableAttributedString(string: goalLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12)])
+        goalAttr.addAttributes([NSAttributedString.Key.font: UIFont.Lato(type: .bold, size: 12), NSAttributedString.Key.foregroundColor: UIColor.lightPurple], range: (goalLabel.text! as NSString).range(of: "8"))
+        goalLabel.attributedText = goalAttr
+
         tableView.dataSource = self
         tableView.delegate = self
 
