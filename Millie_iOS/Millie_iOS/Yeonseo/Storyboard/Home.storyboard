@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="mlB-MW-Hge"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" id="xWx-bi-06k"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="icHomeInactive" selectedImage="icHomeActive" id="xWx-bi-06k"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g88-XX-cza" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,6 +27,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icHomeActive" width="48" height="48"/>
+        <image name="icHomeInactive" width="48" height="48"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
