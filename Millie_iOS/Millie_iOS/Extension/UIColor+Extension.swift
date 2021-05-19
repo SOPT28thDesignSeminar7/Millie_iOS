@@ -13,7 +13,7 @@ extension UIColor {
     }
 
     @nonobjc class var fontLightGrayColor: UIColor {
-        UIColor(red: 241 / 255, green: 241 / 255, blue: 241 / 255, alpha: 1)
+        UIColor(red: 165 / 255, green: 165 / 255, blue: 165 / 255, alpha: 1)
     }
 
     @nonobjc class var grayTextColor: UIColor {

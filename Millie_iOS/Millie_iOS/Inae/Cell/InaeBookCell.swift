@@ -30,6 +30,7 @@ class InaeBookCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.NotoSansKR(type: .regular, size: 12)
         label.text = "리처드 H.틸러"
+        label.textColor = UIColor.fontLightGrayColor
 
         return label
     }()
@@ -38,9 +39,10 @@ class InaeBookCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.NotoSansKR(type: .regular, size: 11)
         label.text = "2개의 하이라이트"
+        label.textColor = UIColor.fontHighlight
 
-        let attributedString = NSMutableAttributedString(string: label.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 11) ?? UIFont.systemFont(ofSize: 11)])
-        attributedString.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .bold, size: 11) ?? UIFont.systemFont(ofSize: 11)], range: (label.text! as NSString).range(of: "개의 하이라이트"))
+        let attributedString = NSMutableAttributedString(string: label.text!, attributes: [NSAttributedString.Key.font: UIFont.Lato(type: .bold, size: 11) ?? UIFont.systemFont(ofSize: 11)])
+        attributedString.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 11) ?? UIFont.systemFont(ofSize: 11)], range: (label.text! as NSString).range(of: "개의 하이라이트"))
 
         label.attributedText = attributedString
         return label
@@ -50,13 +52,16 @@ class InaeBookCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.NotoSansKR(type: .regular, size: 14)
         label.text = "디폴트 옵션이 존재하지 않는다."
+        label.textColor = UIColor.fontMainColor
 
         return label
     }()
 
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
+        label.font = UIFont.Lato(type: .regular, size: 12)
         label.text = "2021.03.09"
+        label.textColor = UIColor.fontLightGrayColor
 
         return label
     }()

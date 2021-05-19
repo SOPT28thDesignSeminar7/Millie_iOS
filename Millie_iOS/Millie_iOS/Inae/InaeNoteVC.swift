@@ -67,7 +67,7 @@ class InaeNoteVC: UIViewController {
         let btn = UIButton()
         btn.setTitle("독서노트", for: .normal)
         btn.setTitleColor(UIColor.black, for: .normal)
-        btn.titleLabel?.font = UIFont.NotoSansKR(type: .regular, size: 15)
+        btn.titleLabel?.font = UIFont.NotoSansKR(type: .bold, size: 15)
         btn.sizeToFit()
 
         /// button underline
