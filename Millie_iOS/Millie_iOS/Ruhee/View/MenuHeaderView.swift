@@ -73,7 +73,7 @@ class MenuHeaderView: UIView {
         
         underlineView.snp.makeConstraints { (make) in
             make.leading.equalTo(booknoteBtn.snp.leading).offset(9.5)
-            make.bottom.equalTo(booknoteBtn.snp.bottom).offset(-2)
+            make.bottom.equalTo(booknoteBtn.snp.bottom).offset(0)
             make.trailing.equalTo(booknoteBtn.snp.trailing).offset(-10)
             make.height.equalTo(2)
         }

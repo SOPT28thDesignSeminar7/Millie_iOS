@@ -36,12 +36,10 @@ class BooklistTableCell: UITableViewCell {
         return label
     }()
     
-    let quotaitonLabel : UILabel = {
-        let label = UILabel()
-        label.text = "“"
-        label.font = UIFont.NotoSansKR(type: .regular, size: 29)
-        label.textColor = UIColor(red: 80.0 / 255.0, green: 65.0 / 255.0, blue: 98.0 / 255.0, alpha: 1.0)
-        return label
+    let quotationImage : UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "icQuotation")
+        return image
     }()
     
     let numberofHighlightLabel : UILabel = {
@@ -78,15 +76,12 @@ class BooklistTableCell: UITableViewCell {
     
     let shareBtn : UIButton = {
         let btn = UIButton()
-        btn.backgroundColor = .yellow
         btn.setImage(UIImage(named: "propIcShare"), for: UIControl.State.normal)
-//        btn.setImage(UIImage(named: ""), for: UIControl.State.selected)
         return btn
     }()
     
     let likeBtn : UIButton = {
         let btn = UIButton()
-        btn.backgroundColor = .yellow
         btn.setImage(UIImage(named: "propIcLike"), for: UIControl.State.normal)
         btn.setImage(UIImage(named: "propIcLikeActive"), for: UIControl.State.selected)
         return btn
@@ -107,7 +102,7 @@ class BooklistTableCell: UITableViewCell {
         addSubview(booktitleLabel)
         addSubview(authorLabel)
         
-        addSubview(quotaitonLabel)
+        addSubview(quotationImage)
         addSubview(numberofHighlightLabel)
         addSubview(highlightLabel)
         
@@ -124,7 +119,7 @@ class BooklistTableCell: UITableViewCell {
         }
         
         booktitleLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(12.5)
+            make.top.equalTo(17)
             make.leading.equalTo(bookImage.snp.trailing).offset(14)
         }
         
@@ -133,18 +128,18 @@ class BooklistTableCell: UITableViewCell {
             make.leading.equalTo(bookImage.snp.trailing).offset(14)
         }
         
-        quotaitonLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(authorLabel.snp.bottom).offset(8)
+        quotationImage.snp.makeConstraints { (make) in
+            make.top.equalTo(authorLabel.snp.bottom).offset(19)
             make.leading.equalTo(bookImage.snp.trailing).offset(16)
         }
         
         numberofHighlightLabel.snp.makeConstraints { (make) in
             make.top.equalTo(authorLabel.snp.bottom).offset(14)
-            make.leading.equalTo(quotaitonLabel.snp.trailing).offset(1)
+            make.leading.equalTo(quotationImage.snp.trailing).offset(2.6)
         }
         
         highlightLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(authorLabel.snp.bottom).offset(16)
+            make.top.equalTo(authorLabel.snp.bottom).offset(15)
             make.leading.equalTo(numberofHighlightLabel.snp.trailing).offset(1)
         }
     
@@ -158,12 +153,19 @@ class BooklistTableCell: UITableViewCell {
             make.leading.equalTo(bookImage.snp.trailing).offset(14)
         }
         
-//        shareBtn.snp.makeConstraints { (make) in
-//            make.
-//        }
+        shareBtn.snp.makeConstraints { (make) in
+            make.bottom.equalTo(lineView.snp.bottom).offset(-31)
+            make.trailing.equalTo(likeBtn.snp.leading).offset(-9)
+        }
+        
+        likeBtn.snp.makeConstraints { (make) in
+            make.bottom.equalTo(lineView.snp.bottom).offset(-31)
+            make.trailing.equalTo(-33)
+        }
+        
         lineView.snp.makeConstraints { (make) in
-            make.top.equalTo(bookImage.snp.bottom).offset(92.5)
             make.leading.equalTo(25)
+            make.bottom.equalTo(0)
             make.trailing.equalTo(-24)
             make.height.equalTo(1)
         }

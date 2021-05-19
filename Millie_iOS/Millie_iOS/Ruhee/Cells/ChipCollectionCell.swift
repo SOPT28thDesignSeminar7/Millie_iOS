@@ -25,10 +25,17 @@ class ChipCollectionCell: UICollectionViewCell {
         
         addSubview(chipBtn)
         
+        chipBtn.addTarget(self, action: #selector(test), for: .touchUpInside)
+        
         chipBtn.snp.makeConstraints { (make) in
             make.top.leading.bottom.trailing.equalToSuperview()
         }
         
+    }
+    
+    @objc func test()
+    {
+        print("test Button Clicked")
     }
     
     required init?(coder: NSCoder) {

@@ -12,6 +12,8 @@ class RuheeNoteVC: UIViewController {
     
     //MARK: - Property
     
+    let bookListArray = ["img_book_1", "img_book_1", "img_book_1"]
+    
     let noteTableView = UITableView()
     
     let statusView : UIView = {
@@ -21,6 +23,7 @@ class RuheeNoteVC: UIViewController {
     }()
     
     //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +32,7 @@ class RuheeNoteVC: UIViewController {
         
         noteTableView.register(ProfileTableCell.self, forCellReuseIdentifier: "ProfileTableCell")
         noteTableView.register(ChipTableCell.self, forCellReuseIdentifier: "ChipTableCell")
+        noteTableView.register(BooklistmenuTableCell.self, forCellReuseIdentifier: "BooklistmenuTableCell")
         noteTableView.register(BooklistTableCell.self, forCellReuseIdentifier: "BooklistTableCell")
 
         configureUI()
@@ -43,9 +47,9 @@ class RuheeNoteVC: UIViewController {
         view.addSubview(noteTableView)
         view.addSubview(statusView)
 
-        
         noteTableView.separatorStyle  = .none
         noteTableView.backgroundColor = .white
+        noteTableView.isUserInteractionEnabled = true
         
         statusView.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
@@ -60,6 +64,7 @@ class RuheeNoteVC: UIViewController {
     }
 }
 
+//MARK: - UITableViewDelegate
 
 extension RuheeNoteVC: UITableViewDelegate {
     
@@ -80,7 +85,11 @@ extension RuheeNoteVC: UITableViewDelegate {
         default:
             if indexPath.row == 0 {
                 return 62.5
+                
             } else if indexPath.row == 1 {
+                return 35
+                
+            } else if indexPath.row == 2 {
                 return 258
             }
         }
@@ -88,10 +97,10 @@ extension RuheeNoteVC: UITableViewDelegate {
         return CGFloat()
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-    }
 }
+
+
+//MARK: - UITableViewDataSource
 
 extension RuheeNoteVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -106,7 +115,7 @@ extension RuheeNoteVC: UITableViewDataSource {
             return 1
             
         default:
-            return 2
+            return 3
         }
     }
     
@@ -115,19 +124,32 @@ extension RuheeNoteVC: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             guard let profileCell = tableView.dequeueReusableCell(withIdentifier: "ProfileTableCell", for: indexPath) as? ProfileTableCell else { return UITableViewCell() }
+            profileCell.selectionStyle = .none
             
             return profileCell
             
         default:
             if indexPath.row == 0 {
                 guard let chipCell = tableView.dequeueReusableCell(withIdentifier: "ChipTableCell", for: indexPath) as? ChipTableCell else { return UITableViewCell() }
+                chipCell.selectionStyle = .none
+                // 그래서 여기서 cell 클래스 인스턴스 완성된 다음
+                // 호출을 시켜서 위에 그려질수잇도록 한...방법임
+                chipCell.setCollectionUI()
                 
                 return chipCell
                 
             } else if indexPath.row == 1 {
+                guard let booklistmenuCell = tableView.dequeueReusableCell(withIdentifier: "BooklistmenuTableCell", for: indexPath) as? BooklistmenuTableCell else { return UITableViewCell()
+                }
+                booklistmenuCell.selectionStyle = .none
+                
+                return booklistmenuCell
+                
+            } else if indexPath.row == 2 {
                 guard let booklistCell = tableView.dequeueReusableCell(withIdentifier: "BooklistTableCell", for: indexPath) as? BooklistTableCell else { return UITableViewCell() }
+                booklistCell.selectionStyle = .none
                 
-                
+                booklistCell.bookImage.image = UIImage(named: bookListArray[indexPath.row])
                 return booklistCell
             }
          

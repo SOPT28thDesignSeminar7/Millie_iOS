@@ -25,6 +25,7 @@
 		BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */; };
 		BBC2600C2652DA680012AFA0 /* ChipCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2600B2652DA680012AFA0 /* ChipCollectionCell.swift */; };
 		BBC26015265374E90012AFA0 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC26014265374E90012AFA0 /* MenuHeaderView.swift */; };
+		BBC2601A26543AC90012AFA0 /* BooklistmenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2601926543AC90012AFA0 /* BooklistmenuTableCell.swift */; };
 		CAAEBC245E0540C495357430 /* Pods_Millie_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332338A5D4E19B2A1F7C4060 /* Pods_Millie_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooklistTableCell.swift; sourceTree = "<group>"; };
 		BBC2600B2652DA680012AFA0 /* ChipCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipCollectionCell.swift; sourceTree = "<group>"; };
 		BBC26014265374E90012AFA0 /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
+		BBC2601926543AC90012AFA0 /* BooklistmenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooklistmenuTableCell.swift; sourceTree = "<group>"; };
 		C1CE98EBF8BFA4C8933C757B /* Pods-Millie_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Millie_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Millie_iOS/Pods-Millie_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */,
 				BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */,
 				BBC2600B2652DA680012AFA0 /* ChipCollectionCell.swift */,
+				BBC2601926543AC90012AFA0 /* BooklistmenuTableCell.swift */,
 				BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */,
 			);
 			path = Cells;
@@ -310,6 +313,7 @@
 			files = (
 				BBC25FEF26527EF00012AFA0 /* ProfileTableCell.swift in Sources */,
 				ABE44EBD264FAC4E00E0FF56 /* UIFont+Extension.swift in Sources */,
+				BBC2601A26543AC90012AFA0 /* BooklistmenuTableCell.swift in Sources */,
 				BBC25FF22652840A0012AFA0 /* ChipTableCell.swift in Sources */,
 				BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */,
 				ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */,
