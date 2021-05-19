@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		482E13FE2653A42E00A26C2A /* MyLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482E13FD2653A42E00A26C2A /* MyLibraryViewController.swift */; };
 		48874080264FAFFE00997B82 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4887407F264FAFFE00997B82 /* Home.storyboard */; };
 		48874083264FB02100997B82 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48874082264FB02100997B82 /* Feed.storyboard */; };
 		48874086264FB03600997B82 /* MyLibrary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48874085264FB03600997B82 /* MyLibrary.storyboard */; };
 		488F9FFE26552F8400D16876 /* commentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F9FFD26552F8400D16876 /* commentTableViewCell.swift */; };
+		ABD5810E2654D06800DDB0D3 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABD5810D2654D06800DDB0D3 /* Lato-Bold.ttf */; };
+		ABD581112654D09F00DDB0D3 /* NotoSerifKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABD581102654D09F00DDB0D3 /* NotoSerifKR-Medium.otf */; };
+		ABD581142654D39F00DDB0D3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */; };
 		ABDAD7342652A07800862243 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */; };
 		ABDAD7352652A07800862243 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */; };
 		ABDAD7362652A07800862243 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */; };
+		ABDAD7482652B21200862243 /* InaeNote.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7472652B21200862243 /* InaeNote.storyboard */; };
+		ABDAD74F2652B84700862243 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD74E2652B84700862243 /* UIImage+Extension.swift */; };
+		ABDAD7522652B90A00862243 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD7512652B90A00862243 /* UIView+Extension.swift */; };
+		ABDAD7792652DCC400862243 /* InaeTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD7772652DCC400862243 /* InaeTagCell.swift */; };
+		ABDAD79126541DB900862243 /* InaeBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD79026541DB900862243 /* InaeBookCell.swift */; };
+		ABDAD77E2652E4BD00862243 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD77D2652E4BD00862243 /* Lato-Regular.ttf */; };
 		ABE44E8E264FA96000E0FF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */; };
 		ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */; };
 		ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E91264FA96000E0FF56 /* ViewController.swift */; };
@@ -25,6 +35,12 @@
 		ABE44EB5264FAC1B00E0FF56 /* RuheeNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */; };
 		ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44EB8264FAC3000E0FF56 /* InaeNoteVC.swift */; };
 		ABE44EBD264FAC4E00E0FF56 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44EBC264FAC4E00E0FF56 /* UIFont+Extension.swift */; };
+		BBC25FEF26527EF00012AFA0 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */; };
+		BBC25FF22652840A0012AFA0 /* ChipTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */; };
+		BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */; };
+		BBC2600C2652DA680012AFA0 /* ChipCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2600B2652DA680012AFA0 /* ChipCollectionCell.swift */; };
+		BBC26015265374E90012AFA0 /* MenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC26014265374E90012AFA0 /* MenuHeaderView.swift */; };
+		BBC2601A26543AC90012AFA0 /* BooklistmenuTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC2601926543AC90012AFA0 /* BooklistmenuTableCell.swift */; };
 		CAAEBC245E0540C495357430 /* Pods_Millie_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332338A5D4E19B2A1F7C4060 /* Pods_Millie_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +52,18 @@
 		48874082264FB02100997B82 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		48874085264FB03600997B82 /* MyLibrary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyLibrary.storyboard; sourceTree = "<group>"; };
 		488F9FFD26552F8400D16876 /* commentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentTableViewCell.swift; sourceTree = "<group>"; };
+		ABD5810D2654D06800DDB0D3 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		ABD581102654D09F00DDB0D3 /* NotoSerifKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Medium.otf"; sourceTree = "<group>"; };
+		ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		ABDAD7472652B21200862243 /* InaeNote.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InaeNote.storyboard; sourceTree = "<group>"; };
+		ABDAD74E2652B84700862243 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		ABDAD7512652B90A00862243 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		ABDAD7772652DCC400862243 /* InaeTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaeTagCell.swift; sourceTree = "<group>"; };
+		ABDAD79026541DB900862243 /* InaeBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaeBookCell.swift; sourceTree = "<group>"; };
+		ABDAD77D2652E4BD00862243 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		ABE44E8A264FA96000E0FF56 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +76,12 @@
 		ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuheeNoteVC.swift; sourceTree = "<group>"; };
 		ABE44EB8264FAC3000E0FF56 /* InaeNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaeNoteVC.swift; sourceTree = "<group>"; };
 		ABE44EBC264FAC4E00E0FF56 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
+		BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipTableCell.swift; sourceTree = "<group>"; };
+		BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooklistTableCell.swift; sourceTree = "<group>"; };
+		BBC2600B2652DA680012AFA0 /* ChipCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipCollectionCell.swift; sourceTree = "<group>"; };
+		BBC26014265374E90012AFA0 /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
+		BBC2601926543AC90012AFA0 /* BooklistmenuTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooklistmenuTableCell.swift; sourceTree = "<group>"; };
 		C1CE98EBF8BFA4C8933C757B /* Pods-Millie_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Millie_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Millie_iOS/Pods-Millie_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +146,27 @@
 				ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */,
 				ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */,
 				ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */,
+				ABDAD77D2652E4BD00862243 /* Lato-Regular.ttf */,
+				ABD5810D2654D06800DDB0D3 /* Lato-Bold.ttf */,
+				ABD581102654D09F00DDB0D3 /* NotoSerifKR-Medium.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		ABDAD7452652A9BB00862243 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				ABDAD7772652DCC400862243 /* InaeTagCell.swift */,
+				ABDAD79026541DB900862243 /* InaeBookCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		ABDAD7462652A9C200862243 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ABE44E81264FA96000E0FF56 = {
@@ -159,7 +209,10 @@
 		ABE44EA2264FAB4B00E0FF56 /* Inae */ = {
 			isa = PBXGroup;
 			children = (
+				ABDAD7462652A9C200862243 /* Model */,
+				ABDAD7452652A9BB00862243 /* Cell */,
 				ABE44EB8264FAC3000E0FF56 /* InaeNoteVC.swift */,
+				ABDAD7472652B21200862243 /* InaeNote.storyboard */,
 			);
 			path = Inae;
 			sourceTree = "<group>";
@@ -167,7 +220,9 @@
 		ABE44EA3264FAB5900E0FF56 /* Ruhee */ = {
 			isa = PBXGroup;
 			children = (
-				ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */,
+				BBC25FE026523E760012AFA0 /* VC */,
+				BBC26017265374EF0012AFA0 /* View */,
+				BBC25FDF26523E6E0012AFA0 /* Cells */,
 			);
 			path = Ruhee;
 			sourceTree = "<group>";
@@ -187,8 +242,39 @@
 			isa = PBXGroup;
 			children = (
 				ABE44EBC264FAC4E00E0FF56 /* UIFont+Extension.swift */,
+				ABDAD74E2652B84700862243 /* UIImage+Extension.swift */,
+				ABDAD7512652B90A00862243 /* UIView+Extension.swift */,
+				ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BBC25FDF26523E6E0012AFA0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */,
+				BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */,
+				BBC2600B2652DA680012AFA0 /* ChipCollectionCell.swift */,
+				BBC2601926543AC90012AFA0 /* BooklistmenuTableCell.swift */,
+				BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BBC25FE026523E760012AFA0 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		BBC26017265374EF0012AFA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BBC26014265374E90012AFA0 /* MenuHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,13 +338,17 @@
 			files = (
 				48874083264FB02100997B82 /* Feed.storyboard in Resources */,
 				ABE44E9A264FA96200E0FF56 /* LaunchScreen.storyboard in Resources */,
+				ABDAD7482652B21200862243 /* InaeNote.storyboard in Resources */,
 				ABE44E97264FA96200E0FF56 /* Assets.xcassets in Resources */,
 				ABDAD7352652A07800862243 /* NotoSansKR-Medium.otf in Resources */,
+				ABD581112654D09F00DDB0D3 /* NotoSerifKR-Medium.otf in Resources */,
 				ABDAD7342652A07800862243 /* NotoSansKR-Bold.otf in Resources */,
+				ABDAD77E2652E4BD00862243 /* Lato-Regular.ttf in Resources */,
 				ABDAD7362652A07800862243 /* NotoSansKR-Regular.otf in Resources */,
 				ABE44E95264FA96000E0FF56 /* Main.storyboard in Resources */,
 				48874086264FB03600997B82 /* MyLibrary.storyboard in Resources */,
 				48874080264FAFFE00997B82 /* Home.storyboard in Resources */,
+				ABD5810E2654D06800DDB0D3 /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,15 +401,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC25FEF26527EF00012AFA0 /* ProfileTableCell.swift in Sources */,
 				ABE44EBD264FAC4E00E0FF56 /* UIFont+Extension.swift in Sources */,
+				BBC2601A26543AC90012AFA0 /* BooklistmenuTableCell.swift in Sources */,
+				BBC25FF22652840A0012AFA0 /* ChipTableCell.swift in Sources */,
+				BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */,
+				ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */,
+				ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */,
+				BBC2600C2652DA680012AFA0 /* ChipCollectionCell.swift in Sources */,
+				ABDAD7792652DCC400862243 /* InaeTagCell.swift in Sources */,
 				ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */,
 				482E13FE2653A42E00A26C2A /* MyLibraryViewController.swift in Sources */,
 				ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */,
+				ABDAD7522652B90A00862243 /* UIView+Extension.swift in Sources */,
+				ABDAD74F2652B84700862243 /* UIImage+Extension.swift in Sources */,
 				ABE44EB5264FAC1B00E0FF56 /* RuheeNoteVC.swift in Sources */,
+				BBC26015265374E90012AFA0 /* MenuHeaderView.swift in Sources */,
 				ABE44E8E264FA96000E0FF56 /* AppDelegate.swift in Sources */,
 				488F9FFE26552F8400D16876 /* commentTableViewCell.swift in Sources */,
 				ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */,
+				ABDAD79126541DB900862243 /* InaeBookCell.swift in Sources */,
 				ABE44EB2264FABF400E0FF56 /* MyBookVC.swift in Sources */,
+				ABD581142654D39F00DDB0D3 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -451,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -468,13 +571,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G7SD8523Y3;
+				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "inaelee.Millie-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ruhee.Millie-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -488,13 +592,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G7SD8523Y3;
+				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "inaelee.Millie-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "ruhee.Millie-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
