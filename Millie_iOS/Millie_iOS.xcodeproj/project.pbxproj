@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ABD5810E2654D06800DDB0D3 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABD5810D2654D06800DDB0D3 /* Lato-Bold.ttf */; };
 		ABD581112654D09F00DDB0D3 /* NotoSerifKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABD581102654D09F00DDB0D3 /* NotoSerifKR-Medium.otf */; };
+		ABD581142654D39F00DDB0D3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */; };
 		ABDAD7342652A07800862243 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */; };
 		ABDAD7352652A07800862243 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */; };
 		ABDAD7362652A07800862243 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */; };
@@ -31,6 +32,7 @@
 		343ECD8D327A061148247589 /* Pods-Millie_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Millie_iOS.release.xcconfig"; path = "Target Support Files/Pods-Millie_iOS/Pods-Millie_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		ABD5810D2654D06800DDB0D3 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		ABD581102654D09F00DDB0D3 /* NotoSerifKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Medium.otf"; sourceTree = "<group>"; };
+		ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				ABE44EBC264FAC4E00E0FF56 /* UIFont+Extension.swift */,
+				ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				ABE44E8E264FA96000E0FF56 /* AppDelegate.swift in Sources */,
 				ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */,
 				ABE44EB2264FABF400E0FF56 /* MyBookVC.swift in Sources */,
+				ABD581142654D39F00DDB0D3 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
