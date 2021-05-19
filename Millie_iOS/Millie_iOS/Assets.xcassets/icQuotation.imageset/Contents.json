@@ -1,18 +1,18 @@
 {
   "images" : [
     {
-      "filename" : "menuBookcase.png",
       "scale" : "1x",
+      "filename" : "icQuotation.png",
       "idiom" : "universal"
     },
     {
-      "filename" : "menuBookcase@2x.png",
       "scale" : "2x",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "filename" : "icQuotation@2x.png"
     },
     {
+      "filename" : "icQuotation@3x.png",
       "scale" : "3x",
-      "filename" : "menuBookcase@3x.png",
       "idiom" : "universal"
     }
   ],
