@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9rx-DM-qNv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -154,7 +155,7 @@
                         <outlet property="navigationBar" destination="1xJ-mx-9pJ" id="i3F-PH-HcH"/>
                         <outlet property="navigationProfileImage" destination="EWS-Mo-mS7" id="28u-VA-hDE"/>
                         <outlet property="navigationTitleLabel" destination="aSN-7C-qGe" id="6Z7-f4-52L"/>
-                        <outlet property="profileImage" destination="8PY-eV-Stv" id="eQY-uZ-XUa"/>
+                        <outlet property="profileImage" destination="8PY-eV-Stv" id="Yy9-86-VDX"/>
                         <outlet property="tableView" destination="2he-o7-2S5" id="rLO-WZ-zPg"/>
                     </connections>
                 </viewController>

@@ -4,9 +4,6 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>NotoSerifKR-Medium.otf</string>
-		<string>Lato-Bold.ttf</string>
-		<string>Lato-Regular.ttf</string>
 		<string>NotoSansKR-Bold.otf</string>
 		<string>NotoSansKR-Medium.otf</string>
 		<string>NotoSansKR-Regular.otf</string>
@@ -29,12 +26,6 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UIAppFonts</key>
-	<array>
-		<string>NotoSansKR-Bold.otf</string>
-		<string>NotoSansKR-Medium.otf</string>
-		<string>NotoSansKR-Regular.otf</string>
-	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -49,7 +40,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>InaeNote</string>
+					<string>Main</string>
 				</dict>
 			</array>
 		</dict>

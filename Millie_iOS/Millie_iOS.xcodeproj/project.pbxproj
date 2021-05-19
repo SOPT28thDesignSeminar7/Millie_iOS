@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		482E13FE2653A42E00A26C2A /* MyLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482E13FD2653A42E00A26C2A /* MyLibraryViewController.swift */; };
 		48874080264FAFFE00997B82 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4887407F264FAFFE00997B82 /* Home.storyboard */; };
 		48874083264FB02100997B82 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48874082264FB02100997B82 /* Feed.storyboard */; };
@@ -16,6 +15,7 @@
 		ABD5810E2654D06800DDB0D3 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABD5810D2654D06800DDB0D3 /* Lato-Bold.ttf */; };
 		ABD581112654D09F00DDB0D3 /* NotoSerifKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABD581102654D09F00DDB0D3 /* NotoSerifKR-Medium.otf */; };
 		ABD581142654D39F00DDB0D3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */; };
+		ABD5812D2655620900DDB0D3 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD5812C2655620900DDB0D3 /* TabBarController.swift */; };
 		ABDAD7342652A07800862243 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */; };
 		ABDAD7352652A07800862243 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */; };
 		ABDAD7362652A07800862243 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */; };
@@ -23,11 +23,10 @@
 		ABDAD74F2652B84700862243 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD74E2652B84700862243 /* UIImage+Extension.swift */; };
 		ABDAD7522652B90A00862243 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD7512652B90A00862243 /* UIView+Extension.swift */; };
 		ABDAD7792652DCC400862243 /* InaeTagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD7772652DCC400862243 /* InaeTagCell.swift */; };
-		ABDAD79126541DB900862243 /* InaeBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD79026541DB900862243 /* InaeBookCell.swift */; };
 		ABDAD77E2652E4BD00862243 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABDAD77D2652E4BD00862243 /* Lato-Regular.ttf */; };
+		ABDAD79126541DB900862243 /* InaeBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDAD79026541DB900862243 /* InaeBookCell.swift */; };
 		ABE44E8E264FA96000E0FF56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */; };
 		ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */; };
-		ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44E91264FA96000E0FF56 /* ViewController.swift */; };
 		ABE44E95264FA96000E0FF56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE44E93264FA96000E0FF56 /* Main.storyboard */; };
 		ABE44E97264FA96200E0FF56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE44E96264FA96200E0FF56 /* Assets.xcassets */; };
 		ABE44E9A264FA96200E0FF56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE44E98264FA96200E0FF56 /* LaunchScreen.storyboard */; };
@@ -55,6 +54,7 @@
 		ABD5810D2654D06800DDB0D3 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		ABD581102654D09F00DDB0D3 /* NotoSerifKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Medium.otf"; sourceTree = "<group>"; };
 		ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		ABD5812C2655620900DDB0D3 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		ABDAD7312652A07700862243 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		ABDAD7322652A07700862243 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		ABDAD7332652A07800862243 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
@@ -62,12 +62,11 @@
 		ABDAD74E2652B84700862243 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		ABDAD7512652B90A00862243 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		ABDAD7772652DCC400862243 /* InaeTagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaeTagCell.swift; sourceTree = "<group>"; };
-		ABDAD79026541DB900862243 /* InaeBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaeBookCell.swift; sourceTree = "<group>"; };
 		ABDAD77D2652E4BD00862243 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		ABDAD79026541DB900862243 /* InaeBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaeBookCell.swift; sourceTree = "<group>"; };
 		ABE44E8A264FA96000E0FF56 /* Millie_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millie_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ABE44E91264FA96000E0FF56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ABE44E94264FA96000E0FF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABE44E96264FA96200E0FF56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE44E99264FA96200E0FF56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -197,11 +196,11 @@
 				ABE44EA2264FAB4B00E0FF56 /* Inae */,
 				ABE44E8D264FA96000E0FF56 /* AppDelegate.swift */,
 				ABE44E8F264FA96000E0FF56 /* SceneDelegate.swift */,
-				ABE44E91264FA96000E0FF56 /* ViewController.swift */,
 				ABE44E93264FA96000E0FF56 /* Main.storyboard */,
 				ABE44E96264FA96200E0FF56 /* Assets.xcassets */,
 				ABE44E98264FA96200E0FF56 /* LaunchScreen.storyboard */,
 				ABE44E9B264FA96200E0FF56 /* Info.plist */,
+				ABD5812C2655620900DDB0D3 /* TabBarController.swift */,
 			);
 			path = Millie_iOS;
 			sourceTree = "<group>";
@@ -406,11 +405,10 @@
 				BBC2601A26543AC90012AFA0 /* BooklistmenuTableCell.swift in Sources */,
 				BBC25FF22652840A0012AFA0 /* ChipTableCell.swift in Sources */,
 				BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */,
-				ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */,
+				ABD5812D2655620900DDB0D3 /* TabBarController.swift in Sources */,
 				ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */,
 				BBC2600C2652DA680012AFA0 /* ChipCollectionCell.swift in Sources */,
 				ABDAD7792652DCC400862243 /* InaeTagCell.swift in Sources */,
-				ABE44E92264FA96000E0FF56 /* ViewController.swift in Sources */,
 				482E13FE2653A42E00A26C2A /* MyLibraryViewController.swift in Sources */,
 				ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */,
 				ABDAD7522652B90A00862243 /* UIView+Extension.swift in Sources */,

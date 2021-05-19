@@ -113,8 +113,8 @@ extension InaeNoteVC {
         bookCaseNameLabel.font = UIFont.NotoSansKR(type: .bold, size: 20)
         bookCaseNameLabel.textColor = UIColor.fontEmphasis
 
-        let bookAttr = NSMutableAttributedString(string: bookCaseNameLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .bold, size: 20)])
-        bookAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 20)], range: (bookCaseNameLabel.text! as NSString).range(of: "의 서재"))
+        let bookAttr = NSMutableAttributedString(string: bookCaseNameLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .bold, size: 20) ?? UIFont.systemFont(ofSize: 20)])
+        bookAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 20) ?? UIFont.systemFont(ofSize: 20)], range: (bookCaseNameLabel.text! as NSString).range(of: "의 서재"))
 
         bookCaseNameLabel.attributedText = bookAttr
 
@@ -122,8 +122,8 @@ extension InaeNoteVC {
         followerLabel.font = UIFont.NotoSansKR(type: .bold, size: 12)
         followerLabel.textColor = UIColor.fontMainColor
         let followerAttr = NSMutableAttributedString(string: followerLabel.text!)
-        followerAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12)], range: (followerLabel.text! as NSString).range(of: "팔로잉"))
-        followerAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12)], range: (followerLabel.text! as NSString).range(of: "팔로워"))
+        followerAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12) ?? UIFont.systemFont(ofSize: 12)], range: (followerLabel.text! as NSString).range(of: "팔로잉"))
+        followerAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12) ?? UIFont.systemFont(ofSize: 12)], range: (followerLabel.text! as NSString).range(of: "팔로워"))
         followerLabel.attributedText = followerAttr
 
 //        goalImage.image = UIImage(named: <#T##String#>)
@@ -131,8 +131,8 @@ extension InaeNoteVC {
         goalLabel.text = "43일째 8밀리"
         goalLabel.textColor = UIColor.fontMainColor
 
-        let goalAttr = NSMutableAttributedString(string: goalLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12)])
-        goalAttr.addAttributes([NSAttributedString.Key.font: UIFont.Lato(type: .bold, size: 12), NSAttributedString.Key.foregroundColor: UIColor.lightPurple], range: (goalLabel.text! as NSString).range(of: "8"))
+        let goalAttr = NSMutableAttributedString(string: goalLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12) ?? UIFont.systemFont(ofSize: 12)])
+        goalAttr.addAttributes([NSAttributedString.Key.font: UIFont.Lato(type: .bold, size: 12) ?? UIFont.systemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.lightPurple], range: (goalLabel.text! as NSString).range(of: "8"))
         goalLabel.attributedText = goalAttr
 
         navigationProfileImage.image = UIImage(named: "imgProfile")
@@ -143,8 +143,8 @@ extension InaeNoteVC {
         navigationTitleLabel.textColor = UIColor.fontEmphasis
         navigationTitleLabel.alpha = 0
 
-        let attr = NSMutableAttributedString(string: navigationTitleLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .bold, size: 15)])
-        attr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 15)], range: (navigationTitleLabel.text! as NSString).range(of: "의 서재"))
+        let attr = NSMutableAttributedString(string: navigationTitleLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .bold, size: 15) ?? UIFont.systemFont(ofSize: 15)])
+        attr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 15) ?? UIFont.systemFont(ofSize: 15)], range: (navigationTitleLabel.text! as NSString).range(of: "의 서재"))
         navigationTitleLabel.attributedText = attr
     }
 
