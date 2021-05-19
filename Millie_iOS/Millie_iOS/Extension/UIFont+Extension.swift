@@ -24,4 +24,19 @@ extension UIFont {
             "NotoSansKR-" + self.rawValue
         }
     }
+
+    class func Lato(type: LatoType, size: CGFloat) -> UIFont! {
+        guard let font = UIFont(name: type.name, size: size) else {
+            return nil
+        }
+        return font
+    }
+
+    public enum LatoType: String {
+        case regular = "Regular"
+
+        var name: String {
+            "Lato-" + self.rawValue
+        }
+    }
 }
