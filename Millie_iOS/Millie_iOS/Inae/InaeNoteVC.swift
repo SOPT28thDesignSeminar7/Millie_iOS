@@ -107,7 +107,22 @@ class InaeNoteVC: UIViewController {
 
 extension InaeNoteVC {
     func setView() {
+        /// navigation
         profileImage.image = UIImage(named: "img_profile")
+
+        navigationProfileImage.image = UIImage(named: "imgProfile")
+        navigationProfileImage.alpha = 0
+
+        navigationTitleLabel.text = "김솝트의 서재"
+        navigationTitleLabel.font = UIFont.NotoSansKR(type: .bold, size: 20)
+        navigationTitleLabel.textColor = UIColor.fontEmphasis
+        navigationTitleLabel.alpha = 0
+
+        let attr = NSMutableAttributedString(string: navigationTitleLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .bold, size: 15) ?? UIFont.systemFont(ofSize: 15)])
+        attr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 15) ?? UIFont.systemFont(ofSize: 15)], range: (navigationTitleLabel.text! as NSString).range(of: "의 서재"))
+        navigationTitleLabel.attributedText = attr
+
+        /// header
 
         bookCaseNameLabel.text = "김솝트의 서재"
         bookCaseNameLabel.font = UIFont.NotoSansKR(type: .bold, size: 20)
@@ -126,7 +141,7 @@ extension InaeNoteVC {
         followerAttr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12) ?? UIFont.systemFont(ofSize: 12)], range: (followerLabel.text! as NSString).range(of: "팔로워"))
         followerLabel.attributedText = followerAttr
 
-//        goalImage.image = UIImage(named: <#T##String#>)
+        goalImage.image = UIImage(named: "100Days")
 
         goalLabel.text = "43일째 8밀리"
         goalLabel.textColor = UIColor.fontMainColor
@@ -134,18 +149,6 @@ extension InaeNoteVC {
         let goalAttr = NSMutableAttributedString(string: goalLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 12) ?? UIFont.systemFont(ofSize: 12)])
         goalAttr.addAttributes([NSAttributedString.Key.font: UIFont.Lato(type: .bold, size: 12) ?? UIFont.systemFont(ofSize: 12), NSAttributedString.Key.foregroundColor: UIColor.lightPurple], range: (goalLabel.text! as NSString).range(of: "8"))
         goalLabel.attributedText = goalAttr
-
-        navigationProfileImage.image = UIImage(named: "imgProfile")
-        navigationProfileImage.alpha = 0
-
-        navigationTitleLabel.text = "김솝트의 서재"
-        navigationTitleLabel.font = UIFont.NotoSansKR(type: .bold, size: 20)
-        navigationTitleLabel.textColor = UIColor.fontEmphasis
-        navigationTitleLabel.alpha = 0
-
-        let attr = NSMutableAttributedString(string: navigationTitleLabel.text!, attributes: [NSAttributedString.Key.font: UIFont.NotoSansKR(type: .bold, size: 15) ?? UIFont.systemFont(ofSize: 15)])
-        attr.addAttributes([NSAttributedString.Key.font: UIFont.NotoSansKR(type: .regular, size: 15) ?? UIFont.systemFont(ofSize: 15)], range: (navigationTitleLabel.text! as NSString).range(of: "의 서재"))
-        navigationTitleLabel.attributedText = attr
     }
 
     func setTableView() {
