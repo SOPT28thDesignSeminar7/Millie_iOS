@@ -35,6 +35,12 @@ class InaeBookCell: UITableViewCell {
         return label
     }()
 
+    private lazy var quotationImage: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "icQuotation"))
+
+        return imageView
+    }()
+
     private lazy var highlightLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.NotoSansKR(type: .regular, size: 11)
@@ -103,7 +109,7 @@ class InaeBookCell: UITableViewCell {
 
 extension InaeBookCell {
     func setConstraint() {
-        contentView.addSubviews([bookImage, bookTitleLabel, authorLabel, highlightLabel, descriptionLabel, dateLabel, shareButton, likeButton])
+        contentView.addSubviews([bookImage, bookTitleLabel, authorLabel, quotationImage, highlightLabel, descriptionLabel, dateLabel, shareButton, likeButton])
 
         bookImage.snp.makeConstraints { make in
             make.top.equalToSuperview().inset(16.5)
@@ -120,20 +126,25 @@ extension InaeBookCell {
             make.top.equalTo(bookTitleLabel.snp.bottom)
             make.leading.equalTo(bookImage.snp.trailing).inset(-14)
         }
+        
+        quotationImage.snp.makeConstraints { make in
+            make.top.equalTo(highlightLabel.snp.top).inset(4)
+            make.leading.equalTo(authorLabel.snp.leading)
+        }
 
         highlightLabel.snp.makeConstraints { make in
             make.top.equalTo(authorLabel.snp.bottom).inset(-15)
-            make.leading.equalTo(authorLabel.snp.leading)
+            make.leading.equalTo(quotationImage.snp.trailing).inset(-2)
         }
 
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(highlightLabel.snp.bottom).inset(-11)
-            make.leading.equalTo(highlightLabel.snp.leading)
+            make.leading.equalTo(quotationImage.snp.leading)
         }
 
         dateLabel.snp.makeConstraints { make in
             make.top.equalTo(descriptionLabel.snp.bottom).inset(-7)
-            make.leading.equalTo(descriptionLabel.snp.leading)
+            make.leading.equalTo(quotationImage.snp.leading)
         }
 
         likeButton.snp.makeConstraints { make in

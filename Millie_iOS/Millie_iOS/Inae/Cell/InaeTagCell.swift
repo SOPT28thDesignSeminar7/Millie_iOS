@@ -53,7 +53,8 @@ class InaeTagCell: UITableViewCell {
 
         scrollView.snp.makeConstraints { make in
             make.top.bottom.equalToSuperview().inset(16.5)
-            make.leading.trailing.equalToSuperview().inset(25)
+            make.leading.equalToSuperview().inset(25)
+            make.trailing.equalToSuperview()
             make.height.equalTo(30)
         }
 

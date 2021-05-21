@@ -19,7 +19,8 @@ class TabBarController: UITabBarController {
         guard let home = inaeStroyboard.instantiateViewController(identifier: "InaeNoteVC") as? InaeNoteVC,
               let myBook = yeonseoStoryboard.instantiateViewController(identifier: "MyLibraryViewController") as? MyLibraryViewController else { return }
 
-        let feed = RuheeNoteVC()
+        let feed = UINavigationController(rootViewController: RuheeNoteVC())
+        feed.isNavigationBarHidden = true
         
         home.tabBarItem.image = UIImage(named: "icHomeInactive")
         feed.tabBarItem.image = UIImage(named: "icFeedInactive")
