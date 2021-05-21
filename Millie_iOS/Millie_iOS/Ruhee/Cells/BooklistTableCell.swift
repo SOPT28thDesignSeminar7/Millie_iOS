@@ -187,5 +187,20 @@ class BooklistTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setData(bookcoverImage: String, bookTitle: String, bookAuthor: String,
+                 highlightNum: String, bookDescription: String, uploadDate: String) {
+        
+        if let image = UIImage(named: bookcoverImage) {
+            bookImage.image = image
+        }
+        
+        booktitleLabel.text = bookTitle
+        authorLabel.text = bookAuthor
+        numberofHighlightLabel.text = highlightNum
+        describeLabel.text = bookDescription
+        dateLabel.text = uploadDate
+        
+    }
 
 }

@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct BookModel {
+    var image : String
+    var title : String
+    var author : String
+    var higlightNumber : String
+    var description : String
+    var date : String
+}

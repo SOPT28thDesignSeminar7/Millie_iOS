@@ -34,6 +34,7 @@
 		ABE44EB5264FAC1B00E0FF56 /* RuheeNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */; };
 		ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44EB8264FAC3000E0FF56 /* InaeNoteVC.swift */; };
 		ABE44EBD264FAC4E00E0FF56 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE44EBC264FAC4E00E0FF56 /* UIFont+Extension.swift */; };
+		BB0EAECE2657B75C00282458 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0EAECD2657B75C00282458 /* BookModel.swift */; };
 		BBC25FEF26527EF00012AFA0 /* ProfileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */; };
 		BBC25FF22652840A0012AFA0 /* ChipTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */; };
 		BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */; };
@@ -75,6 +76,7 @@
 		ABE44EB4264FAC1B00E0FF56 /* RuheeNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuheeNoteVC.swift; sourceTree = "<group>"; };
 		ABE44EB8264FAC3000E0FF56 /* InaeNoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaeNoteVC.swift; sourceTree = "<group>"; };
 		ABE44EBC264FAC4E00E0FF56 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		BB0EAECD2657B75C00282458 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		BBC25FEE26527EF00012AFA0 /* ProfileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableCell.swift; sourceTree = "<group>"; };
 		BBC25FF12652840A0012AFA0 /* ChipTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipTableCell.swift; sourceTree = "<group>"; };
 		BBC25FF52652846F0012AFA0 /* BooklistTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooklistTableCell.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		ABE44EA3264FAB5900E0FF56 /* Ruhee */ = {
 			isa = PBXGroup;
 			children = (
+				BB0EAECC2657B74500282458 /* Model */,
 				BBC25FE026523E760012AFA0 /* VC */,
 				BBC26017265374EF0012AFA0 /* View */,
 				BBC25FDF26523E6E0012AFA0 /* Cells */,
@@ -246,6 +249,14 @@
 				ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		BB0EAECC2657B74500282458 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BB0EAECD2657B75C00282458 /* BookModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BBC25FDF26523E6E0012AFA0 /* Cells */ = {
@@ -404,6 +415,7 @@
 				ABE44EBD264FAC4E00E0FF56 /* UIFont+Extension.swift in Sources */,
 				BBC2601A26543AC90012AFA0 /* BooklistmenuTableCell.swift in Sources */,
 				BBC25FF22652840A0012AFA0 /* ChipTableCell.swift in Sources */,
+				BB0EAECE2657B75C00282458 /* BookModel.swift in Sources */,
 				BBC25FF62652846F0012AFA0 /* BooklistTableCell.swift in Sources */,
 				ABD5812D2655620900DDB0D3 /* TabBarController.swift in Sources */,
 				ABE44EB9264FAC3000E0FF56 /* InaeNoteVC.swift in Sources */,

@@ -12,7 +12,12 @@ class RuheeNoteVC: UIViewController {
     
     //MARK: - Property
     
-    let bookListArray = ["img_book_1", "img_book_1", "img_book_1"]
+    var bookListArray = [BookModel(image: "img_book_1", title: "넛지", author: "리처드 H.틸러",
+                                   higlightNumber: "2", description: "디폴트 옵션이 존재하지 않는다", date: "2021.02.04"),
+                         BookModel(image: "img_book_1", title: "넛지", author: "리처드 H.틸러",
+                                                        higlightNumber: "2", description: "디폴트 옵션이 존재하지 않는다", date: "2021.02.04"),
+                         BookModel(image: "img_book_1", title: "넛지", author: "리처드 H.틸러",
+                                                        higlightNumber: "2", description: "디폴트 옵션이 존재하지 않는다", date: "2021.02.04")]
     
     let noteTableView = UITableView()
     
@@ -49,7 +54,7 @@ class RuheeNoteVC: UIViewController {
 
         noteTableView.separatorStyle  = .none
         noteTableView.backgroundColor = .white
-        noteTableView.isUserInteractionEnabled = true
+//        noteTableView.isUserInteractionEnabled = true
         
         statusView.snp.makeConstraints { (make) in
             make.top.leading.trailing.equalToSuperview()
@@ -89,14 +94,35 @@ extension RuheeNoteVC: UITableViewDelegate {
             } else if indexPath.row == 1 {
                 return 35
                 
-            } else if indexPath.row == 2 {
+            } else {
                 return 258
             }
         }
         
-        return CGFloat()
     }
     
+    // 셀 선택 시 화면 전환 및 데이터 전달
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        switch indexPath.section {
+//        case 0:
+//            print("선택안함")
+//
+//        default:
+//            if indexPath.row == 0 {
+//                print("선택안함")
+//
+//            } else if indexPath.row == 1 {
+//                print("선택안함")
+//
+//            } else {
+//                let storyboard = UIStoryboard(name: "MyLibrary", bundle: nil)
+//                guard let nextVC = storyboard.instantiateViewController(identifier: "MyLibraryViewController")
+//                        as? MyLibraryViewController else { return }
+//
+//                nextVC.navigationController?.pushViewController(nextVC, animated: true)
+//
+//            }
+//    }
 }
 
 
@@ -115,7 +141,9 @@ extension RuheeNoteVC: UITableViewDataSource {
             return 1
             
         default:
-            return 3
+            // headerview 기준으로 나눠서 아래에 5개가 들어가는 이유는..
+            // 책이 3권 들어갈 경우... -> 기존 chipcell + booklistmenucell +3권(booklistcell)
+            return 5
         }
     }
     
@@ -145,15 +173,22 @@ extension RuheeNoteVC: UITableViewDataSource {
                 
                 return booklistmenuCell
                 
-            } else if indexPath.row == 2 {
+            } else {
                 guard let booklistCell = tableView.dequeueReusableCell(withIdentifier: "BooklistTableCell", for: indexPath) as? BooklistTableCell else { return UITableViewCell() }
                 booklistCell.selectionStyle = .none
                 
-                booklistCell.bookImage.image = UIImage(named: bookListArray[indexPath.row])
+                // indexPath.row - 2를 해주는 이유 : 책이 들어가야 하는 곳은 bookListArray[2]부터니까.. 전체가 5면 2를 빼줌... 그래야 셀이 3개...
+                booklistCell.setData(bookcoverImage: bookListArray[indexPath.row-2].image,
+                                     bookTitle: bookListArray[indexPath.row-2].title,
+                                     bookAuthor: bookListArray[indexPath.row-2].author,
+                                     highlightNum: bookListArray[indexPath.row-2].higlightNumber,
+                                     bookDescription: bookListArray[indexPath.row-2].description,
+                                     uploadDate: bookListArray[indexPath.row-2].date)
+                
                 return booklistCell
             }
          
-            return UITableViewCell()
+            
         }
     }
     
