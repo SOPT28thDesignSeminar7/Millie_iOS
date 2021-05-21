@@ -102,27 +102,33 @@ extension RuheeNoteVC: UITableViewDelegate {
     }
     
     // 셀 선택 시 화면 전환 및 데이터 전달
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        switch indexPath.section {
-//        case 0:
-//            print("선택안함")
-//
-//        default:
-//            if indexPath.row == 0 {
-//                print("선택안함")
-//
-//            } else if indexPath.row == 1 {
-//                print("선택안함")
-//
-//            } else {
-//                let storyboard = UIStoryboard(name: "MyLibrary", bundle: nil)
-//                guard let nextVC = storyboard.instantiateViewController(identifier: "MyLibraryViewController")
-//                        as? MyLibraryViewController else { return }
-//
-//                nextVC.navigationController?.pushViewController(nextVC, animated: true)
-//
-//            }
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        switch indexPath.section {
+        case 0:
+            print("선택안함 - profile cell")
+            
+        default:
+            if indexPath.row == 0 {
+                print("선택안함 - chip cell")
+                
+            } else if indexPath.row == 1 {
+                print("선택안함 - booklistmenu cell")
+                
+            } else {
+                print("booklist cell")
+                let storyboard = UIStoryboard(name: "MyLibrary", bundle: nil)
+                guard let nextVC = storyboard.instantiateViewController(identifier: "MyLibraryViewController")
+                        as? MyLibraryViewController else { return }
+                
+                self.navigationController?.pushViewController(nextVC, animated: true)
+                
+            }
+        }
+    }
+    
+    
+    
 }
 
 
@@ -175,7 +181,7 @@ extension RuheeNoteVC: UITableViewDataSource {
                 
             } else {
                 guard let booklistCell = tableView.dequeueReusableCell(withIdentifier: "BooklistTableCell", for: indexPath) as? BooklistTableCell else { return UITableViewCell() }
-                booklistCell.selectionStyle = .none
+//                booklistCell.selectionStyle = .none
                 
                 // indexPath.row - 2를 해주는 이유 : 책이 들어가야 하는 곳은 bookListArray[2]부터니까.. 전체가 5면 2를 빼줌... 그래야 셀이 3개...
                 booklistCell.setData(bookcoverImage: bookListArray[indexPath.row-2].image,
