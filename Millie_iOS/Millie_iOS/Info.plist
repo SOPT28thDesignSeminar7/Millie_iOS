@@ -4,6 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>NotoSerifKR-Medium.otf</string>
+		<string>Lato-Regular.ttf</string>
+		<string>Lato-Bold.ttf</string>
 		<string>NotoSansKR-Bold.otf</string>
 		<string>NotoSansKR-Medium.otf</string>
 		<string>NotoSansKR-Regular.otf</string>
