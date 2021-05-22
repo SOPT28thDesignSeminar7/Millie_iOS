@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oaf-Bo-9Vi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oaf-Bo-9Vi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -162,124 +162,90 @@
                                                     <constraint firstAttribute="height" constant="48" id="wrX-ad-A7c"/>
                                                 </constraints>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAp-Wa-tyu">
-                                                <rect key="frame" x="50" y="446" width="35" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="N73-VO-TNW"/>
-                                                    <constraint firstAttribute="width" constant="35" id="SsL-TZ-7He"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <state key="normal" image="colorAllSelectionSelected"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyv-sx-W26">
-                                                <rect key="frame" x="97" y="446" width="35" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="3sf-hd-ln3"/>
-                                                    <constraint firstAttribute="width" constant="35" id="jhs-a9-E5J"/>
-                                                </constraints>
-                                                <state key="normal" image="colorYellowSelectionUnselected"/>
-                                                <state key="selected" image="colorYellowSelectionSelected"/>
-                                                <connections>
-                                                    <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="kRV-ar-HeG"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj5-7i-XZA">
-                                                <rect key="frame" x="144" y="446" width="35" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="Xss-Xm-Tig"/>
-                                                    <constraint firstAttribute="width" constant="35" id="qsj-eG-WdJ"/>
-                                                </constraints>
-                                                <state key="normal" image="colorRedSelectionUnselected"/>
-                                                <state key="selected" image="colorRedSelectionSelected"/>
-                                                <connections>
-                                                    <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="eQC-wm-8iW"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FU-z1-u6s">
-                                                <rect key="frame" x="191" y="446" width="35" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="hJN-R8-oE5"/>
-                                                    <constraint firstAttribute="width" constant="35" id="ztn-oI-zsc"/>
-                                                </constraints>
-                                                <state key="normal" image="colorGreenSelectionUnselected"/>
-                                                <state key="selected" image="colorGreenSelectionSelected"/>
-                                                <connections>
-                                                    <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="NBp-DW-x5r"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e9-6O-AoZ">
-                                                <rect key="frame" x="238" y="446" width="35" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="w6M-xD-fkS"/>
-                                                    <constraint firstAttribute="width" constant="35" id="xJY-4K-B1V"/>
-                                                </constraints>
-                                                <state key="normal" image="colorBlueSelectionUnselected"/>
-                                                <state key="selected" image="colorBlueSelectionSelected"/>
-                                                <connections>
-                                                    <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="rE5-oh-AGj"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTO-VD-a7s">
-                                                <rect key="frame" x="285" y="446" width="35" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="1dX-rJ-WIf"/>
-                                                    <constraint firstAttribute="width" constant="35" id="UpH-bG-70u"/>
-                                                </constraints>
-                                                <state key="normal" image="colorPurpleSelectionUnselected"/>
-                                                <state key="selected" image="colorPurpleSelectionSelected"/>
-                                                <connections>
-                                                    <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="2na-KD-pZd"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdd-pG-wwH">
-                                                <rect key="frame" x="332" y="446" width="35" height="31"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="nfn-ax-cMc"/>
-                                                    <constraint firstAttribute="width" constant="35" id="sSt-KC-aNd"/>
-                                                </constraints>
-                                                <state key="normal" image="colorUnderlineSelectionUnselected"/>
-                                                <state key="selected" image="colorUnderlineSelectionSelected"/>
-                                                <connections>
-                                                    <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="KkH-0o-7HY"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="cYa-ZD-1iH">
+                                                <rect key="frame" x="32" y="446" width="350" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAp-Wa-tyu">
+                                                        <rect key="frame" x="0.0" y="0.0" width="40.5" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                        <state key="normal" image="colorAllSelectionSelected"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyv-sx-W26">
+                                                        <rect key="frame" x="51.5" y="0.0" width="40.5" height="31"/>
+                                                        <state key="normal" image="colorYellowSelectionUnselected"/>
+                                                        <state key="selected" image="colorYellowSelectionSelected"/>
+                                                        <connections>
+                                                            <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="kRV-ar-HeG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gj5-7i-XZA">
+                                                        <rect key="frame" x="103" y="0.0" width="40.5" height="31"/>
+                                                        <state key="normal" image="colorRedSelectionUnselected"/>
+                                                        <state key="selected" image="colorRedSelectionSelected"/>
+                                                        <connections>
+                                                            <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="eQC-wm-8iW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6FU-z1-u6s">
+                                                        <rect key="frame" x="154.5" y="0.0" width="41" height="31"/>
+                                                        <state key="normal" image="colorGreenSelectionUnselected"/>
+                                                        <state key="selected" image="colorGreenSelectionSelected"/>
+                                                        <connections>
+                                                            <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="NBp-DW-x5r"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0e9-6O-AoZ">
+                                                        <rect key="frame" x="206.5" y="0.0" width="40.5" height="31"/>
+                                                        <state key="normal" image="colorBlueSelectionUnselected"/>
+                                                        <state key="selected" image="colorBlueSelectionSelected"/>
+                                                        <connections>
+                                                            <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="rE5-oh-AGj"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTO-VD-a7s">
+                                                        <rect key="frame" x="258" y="0.0" width="40.5" height="31"/>
+                                                        <state key="normal" image="colorPurpleSelectionUnselected"/>
+                                                        <state key="selected" image="colorPurpleSelectionSelected"/>
+                                                        <connections>
+                                                            <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="2na-KD-pZd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdd-pG-wwH">
+                                                        <rect key="frame" x="309.5" y="0.0" width="40.5" height="31"/>
+                                                        <state key="normal" image="colorUnderlineSelectionUnselected"/>
+                                                        <state key="selected" image="colorUnderlineSelectionSelected"/>
+                                                        <connections>
+                                                            <action selector="likeButtonTappedWithSender:" destination="oaf-Bo-9Vi" eventType="touchUpInside" id="KkH-0o-7HY"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="BAp-Wa-tyu" firstAttribute="leading" secondItem="yKM-5d-QGE" secondAttribute="leading" constant="50" id="07y-Ce-nDd"/>
-                                            <constraint firstItem="6FU-z1-u6s" firstAttribute="leading" secondItem="gj5-7i-XZA" secondAttribute="trailing" constant="12" id="3Pm-Md-giK"/>
-                                            <constraint firstItem="Cdd-pG-wwH" firstAttribute="leading" secondItem="cTO-VD-a7s" secondAttribute="trailing" constant="12" id="7ok-5Y-OJ2"/>
                                             <constraint firstItem="EVu-iP-isG" firstAttribute="top" secondItem="yKM-5d-QGE" secondAttribute="top" constant="391" id="Bzg-Z7-033"/>
                                             <constraint firstAttribute="height" constant="1300" id="CNL-KP-xHB"/>
                                             <constraint firstItem="zfD-oA-Oq8" firstAttribute="top" secondItem="uAE-MQ-kl7" secondAttribute="bottom" constant="19" id="Dfw-7K-gWg"/>
-                                            <constraint firstItem="Lyv-sx-W26" firstAttribute="leading" secondItem="BAp-Wa-tyu" secondAttribute="trailing" constant="12" id="EIR-yc-gG7"/>
                                             <constraint firstAttribute="trailing" secondItem="KqA-dp-19f" secondAttribute="trailing" id="Fcs-67-zxv"/>
                                             <constraint firstItem="Wdz-Vg-W0A" firstAttribute="leading" secondItem="yKM-5d-QGE" secondAttribute="leading" constant="35" id="Fnd-p5-bhR"/>
-                                            <constraint firstItem="BAp-Wa-tyu" firstAttribute="top" secondItem="Wdz-Vg-W0A" secondAttribute="bottom" constant="21" id="HEj-A3-YRk"/>
-                                            <constraint firstItem="cTO-VD-a7s" firstAttribute="top" secondItem="Wdz-Vg-W0A" secondAttribute="bottom" constant="21" id="Ha0-F9-dAl"/>
                                             <constraint firstAttribute="bottom" secondItem="AGI-jd-J8l" secondAttribute="bottom" id="LR3-ij-FAI"/>
-                                            <constraint firstItem="cTO-VD-a7s" firstAttribute="leading" secondItem="0e9-6O-AoZ" secondAttribute="trailing" constant="12" id="NRI-OB-7Bs"/>
-                                            <constraint firstItem="0e9-6O-AoZ" firstAttribute="top" secondItem="Wdz-Vg-W0A" secondAttribute="bottom" constant="21" id="NdG-SQ-2d6"/>
-                                            <constraint firstItem="Cdd-pG-wwH" firstAttribute="top" secondItem="Wdz-Vg-W0A" secondAttribute="bottom" constant="21" id="NtB-NH-3Dy"/>
-                                            <constraint firstItem="6FU-z1-u6s" firstAttribute="top" secondItem="Wdz-Vg-W0A" secondAttribute="bottom" constant="21" id="Olh-Cj-Hcx"/>
                                             <constraint firstItem="EVu-iP-isG" firstAttribute="leading" secondItem="yKM-5d-QGE" secondAttribute="leading" constant="35" id="SdX-Ik-mf0"/>
                                             <constraint firstAttribute="trailing" secondItem="Wdz-Vg-W0A" secondAttribute="trailing" constant="35" id="T2r-WT-MwY"/>
                                             <constraint firstAttribute="trailing" secondItem="AGI-jd-J8l" secondAttribute="trailing" constant="35" id="Ugc-wy-CJM"/>
                                             <constraint firstItem="uAE-MQ-kl7" firstAttribute="top" secondItem="yKM-5d-QGE" secondAttribute="top" constant="21" id="Vn8-dy-Tnw"/>
                                             <constraint firstItem="AGI-jd-J8l" firstAttribute="leading" secondItem="yKM-5d-QGE" secondAttribute="leading" constant="35" id="WoJ-WW-uvb"/>
                                             <constraint firstItem="uAE-MQ-kl7" firstAttribute="centerX" secondItem="yKM-5d-QGE" secondAttribute="centerX" id="ar0-iN-Dwp"/>
+                                            <constraint firstItem="cYa-ZD-1iH" firstAttribute="leading" secondItem="yKM-5d-QGE" secondAttribute="leading" constant="32" id="bg1-rh-g9n"/>
+                                            <constraint firstAttribute="trailing" secondItem="cYa-ZD-1iH" secondAttribute="trailing" constant="32" id="dA3-2m-EDG"/>
                                             <constraint firstItem="Wdz-Vg-W0A" firstAttribute="top" secondItem="EVu-iP-isG" secondAttribute="bottom" constant="8" id="dDT-cS-c2B"/>
                                             <constraint firstItem="ONl-XK-Jgh" firstAttribute="leading" secondItem="yKM-5d-QGE" secondAttribute="leading" id="eqM-8Q-FJT"/>
                                             <constraint firstItem="ONl-XK-Jgh" firstAttribute="top" secondItem="yKM-5d-QGE" secondAttribute="top" constant="170" id="feQ-Bu-Fcv"/>
-                                            <constraint firstItem="Lyv-sx-W26" firstAttribute="top" secondItem="Wdz-Vg-W0A" secondAttribute="bottom" constant="21" id="g1t-HJ-3Pf"/>
-                                            <constraint firstItem="0e9-6O-AoZ" firstAttribute="leading" secondItem="6FU-z1-u6s" secondAttribute="trailing" constant="12" id="hej-7c-hGj"/>
                                             <constraint firstItem="KqA-dp-19f" firstAttribute="top" secondItem="yKM-5d-QGE" secondAttribute="top" constant="170" id="jnS-wn-Erc"/>
                                             <constraint firstAttribute="trailing" secondItem="euW-KX-s9t" secondAttribute="trailing" constant="128" id="kkV-6q-1Cv"/>
                                             <constraint firstItem="euW-KX-s9t" firstAttribute="top" secondItem="zfD-oA-Oq8" secondAttribute="bottom" id="oLK-qA-vFV"/>
-                                            <constraint firstItem="gj5-7i-XZA" firstAttribute="leading" secondItem="Lyv-sx-W26" secondAttribute="trailing" constant="12" id="prM-tg-6tN"/>
-                                            <constraint firstItem="gj5-7i-XZA" firstAttribute="top" secondItem="Wdz-Vg-W0A" secondAttribute="bottom" constant="21" id="qI2-FK-0Ap"/>
                                             <constraint firstItem="zfD-oA-Oq8" firstAttribute="centerX" secondItem="yKM-5d-QGE" secondAttribute="centerX" id="u5s-NZ-cQQ"/>
-                                            <constraint firstItem="AGI-jd-J8l" firstAttribute="top" secondItem="BAp-Wa-tyu" secondAttribute="bottom" constant="21" id="v38-s8-2JQ"/>
+                                            <constraint firstItem="cYa-ZD-1iH" firstAttribute="top" secondItem="Wdz-Vg-W0A" secondAttribute="bottom" constant="21" id="xeA-vR-h93"/>
+                                            <constraint firstItem="AGI-jd-J8l" firstAttribute="top" secondItem="cYa-ZD-1iH" secondAttribute="bottom" constant="21" id="zem-Wf-j72"/>
                                         </constraints>
                                     </view>
                                 </subviews>
