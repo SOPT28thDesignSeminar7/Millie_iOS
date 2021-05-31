@@ -212,6 +212,7 @@
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdd-pG-wwH">
                                                         <rect key="frame" x="309.5" y="0.0" width="40.5" height="31"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                         <state key="normal" image="colorUnderlineSelectionUnselected"/>
                                                         <state key="selected" image="colorUnderlineSelectionSelected"/>
                                                         <connections>
