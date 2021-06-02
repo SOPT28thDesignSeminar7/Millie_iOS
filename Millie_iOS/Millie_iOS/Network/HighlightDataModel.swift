@@ -9,15 +9,22 @@ import Foundation
 
 // MARK: - HighlightDataModel
 
-struct HighlightDataModel <T : Codable> {
+struct HighlightDataModel <T : Codable>: Codable {
     let status : Int
     let message : String?
-    let data : T
+    let data : T?
     
     enum CodingKeys : String, CodingKey {
         case status
         case message
         case data
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        status = (try? values.decode(Int.self, forKey: .status)) ?? -1
+        message = (try? values.decode(String.self, forKey: .message)) ?? ""
+        data = (try? values.decode(T.self, forKey: .data)) ?? nil
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		482E13FE2653A42E00A26C2A /* MyLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482E13FD2653A42E00A26C2A /* MyLibraryViewController.swift */; };
+		48720B3A26663DEB0094FCFC /* GetHighlightDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48720B3926663DEB0094FCFC /* GetHighlightDataService.swift */; };
 		48874080264FAFFE00997B82 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4887407F264FAFFE00997B82 /* Home.storyboard */; };
 		48874083264FB02100997B82 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48874082264FB02100997B82 /* Feed.storyboard */; };
 		48874086264FB03600997B82 /* MyLibrary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48874085264FB03600997B82 /* MyLibrary.storyboard */; };
@@ -52,6 +53,7 @@
 		332338A5D4E19B2A1F7C4060 /* Pods_Millie_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Millie_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		343ECD8D327A061148247589 /* Pods-Millie_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Millie_iOS.release.xcconfig"; path = "Target Support Files/Pods-Millie_iOS/Pods-Millie_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		482E13FD2653A42E00A26C2A /* MyLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLibraryViewController.swift; sourceTree = "<group>"; };
+		48720B3926663DEB0094FCFC /* GetHighlightDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHighlightDataService.swift; sourceTree = "<group>"; };
 		4887407F264FAFFE00997B82 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		48874082264FB02100997B82 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		48874085264FB03600997B82 /* MyLibrary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyLibrary.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 				332338A5D4E19B2A1F7C4060 /* Pods_Millie_iOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48720B3826663C100094FCFC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				48720B3926663DEB0094FCFC /* GetHighlightDataService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		4887407C264FAFA800997B82 /* Storyboard */ = {
@@ -241,6 +251,7 @@
 		ABE44EA4264FAB5C00E0FF56 /* Yeonseo */ = {
 			isa = PBXGroup;
 			children = (
+				48720B3826663C100094FCFC /* Network */,
 				488F9FFA2655290600D16876 /* Cell */,
 				4887407E264FAFC200997B82 /* VCs */,
 				4887407C264FAFA800997B82 /* Storyboard */,
@@ -450,6 +461,7 @@
 				BBC26015265374E90012AFA0 /* MenuHeaderView.swift in Sources */,
 				ABE44E8E264FA96000E0FF56 /* AppDelegate.swift in Sources */,
 				488F9FFE26552F8400D16876 /* commentTableViewCell.swift in Sources */,
+				48720B3A26663DEB0094FCFC /* GetHighlightDataService.swift in Sources */,
 				BB4E2F6C26649A0D00F46A87 /* NetworkResult.swift in Sources */,
 				ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */,
 				BB4E2F622663FDBB00F46A87 /* APIConstants.swift in Sources */,

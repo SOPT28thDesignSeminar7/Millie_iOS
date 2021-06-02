@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oaf-Bo-9Vi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oaf-Bo-9Vi">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -105,16 +105,10 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021-02-05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0I-Dq-CbP">
-                                                                    <rect key="frame" x="36" y="92.5" width="69" height="14.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2021-02-05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0I-Dq-CbP">
+                                                                    <rect key="frame" x="36" y="93" width="179" height="15"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                     <color key="textColor" red="0.67843137254901964" green="0.67843137254901964" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="21:41:18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQ0-E8-o3H">
-                                                                    <rect key="frame" x="112" y="92.5" width="46.5" height="14.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                                    <color key="textColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gY3-HK-5gV">
@@ -127,14 +121,12 @@
                                                                 </button>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="fQ0-E8-o3H" firstAttribute="leading" secondItem="O0I-Dq-CbP" secondAttribute="trailing" constant="7" id="6BR-N8-jyb"/>
                                                                 <constraint firstItem="W7Y-Eh-kMg" firstAttribute="leading" secondItem="9i3-Jh-cCd" secondAttribute="leadingMargin" constant="16" id="DxJ-2N-WG0"/>
-                                                                <constraint firstAttribute="bottomMargin" secondItem="O0I-Dq-CbP" secondAttribute="bottom" constant="19" id="E7T-GC-zS9"/>
-                                                                <constraint firstAttribute="bottomMargin" secondItem="fQ0-E8-o3H" secondAttribute="bottom" constant="19" id="Qf5-be-Fid"/>
                                                                 <constraint firstAttribute="trailing" secondItem="gY3-HK-5gV" secondAttribute="trailing" id="ZLM-D6-lh6"/>
                                                                 <constraint firstItem="W7Y-Eh-kMg" firstAttribute="top" secondItem="9i3-Jh-cCd" secondAttribute="topMargin" constant="19" id="aRZ-ir-C6M"/>
+                                                                <constraint firstItem="O0I-Dq-CbP" firstAttribute="top" secondItem="W7Y-Eh-kMg" secondAttribute="bottom" constant="24.5" id="iSn-30-smV"/>
                                                                 <constraint firstAttribute="bottom" secondItem="gY3-HK-5gV" secondAttribute="bottom" constant="25" id="s4h-3p-ngm"/>
-                                                                <constraint firstItem="O0I-Dq-CbP" firstAttribute="leading" secondItem="9i3-Jh-cCd" secondAttribute="leadingMargin" constant="16" id="xmj-m2-1vP"/>
+                                                                <constraint firstItem="O0I-Dq-CbP" firstAttribute="leading" secondItem="9i3-Jh-cCd" secondAttribute="leadingMargin" constant="16" id="tOh-9r-cvY"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
                                                         <accessibility key="accessibilityConfiguration">
@@ -143,7 +135,6 @@
                                                         <connections>
                                                             <outlet property="commentLabel" destination="W7Y-Eh-kMg" id="nZ8-lu-heW"/>
                                                             <outlet property="dateLabel" destination="O0I-Dq-CbP" id="xof-gp-yUf"/>
-                                                            <outlet property="timeLabel" destination="fQ0-E8-o3H" id="J1U-UB-795"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -286,6 +277,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="414" height="1300"/>
                     <connections>
+                        <outlet property="bookimage" destination="zfD-oA-Oq8" id="cnF-oV-XjF"/>
                         <outlet property="booknameLabel" destination="mAy-oF-U0l" id="Q0v-BL-onR"/>
                         <outlet property="commentTableView" destination="AGI-jd-J8l" id="txc-PE-jUD"/>
                         <outlet property="highLightLabel" destination="hgs-qY-AbW" id="YbP-BU-NBf"/>

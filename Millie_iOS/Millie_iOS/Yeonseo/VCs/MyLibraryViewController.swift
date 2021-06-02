@@ -16,10 +16,18 @@ class MyLibraryViewController: UIViewController {
     @IBOutlet weak var commentTableView: UITableView!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var highLightLabel: UILabel!
+    @IBOutlet weak var bookimage: UIImageView!
+    var hightlightArray : [BookListHighlight] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        let number  = setRandomNumber()
+        numberOfPersonLikedLabel.text = "이 책에 하이라이트한 회원 " + String(number) + "명"
+        
+        
+        
         commentTableView.delegate = self
         commentTableView.dataSource = self
         commentTableView.separatorStyle = .none
@@ -33,6 +41,34 @@ class MyLibraryViewController: UIViewController {
     
     @IBAction func likeButtonTapped(sender: UIButton) {
         sender.isSelected = !sender.isSelected
+    }
+    
+    func setRandomNumber() -> Int {
+        let number = Int.random(in: 1000...30000)
+        return number
+    }
+    
+    func connectServer(){
+        GetHighlightDataService.shared.getHighlightInfo{ (response) in
+            switch(response)
+            {
+            case .success(let hightlightData):
+                if let data = hightlightData as? BookDetail {
+                    self.booknameLabel.text = data.title
+                    self.numberLabel.text = String(data.highlightCount)
+                    self.hightlightArray = data.highlights
+                    //self.bookimage.image = UIImage(: data.image)
+                }
+            case .requestErr(let message) :
+                print("requestERR",message)
+            case .pathErr :
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+    }
     }
 }
 
@@ -54,6 +90,10 @@ extension MyLibraryViewController : UITableViewDelegate, UITableViewDataSource {
         cell.layer.shadowRadius = 8.0
         cell.layer.shadowOpacity = 0.15
         cell.layer.masksToBounds = false
+        
+        cell.dateLabel.text = hightlightArray[indexPath.row].highlightDate
+        cell.commentLabel.text = hightlightArray[indexPath.row].highlightText
+        
 //        cell.layer.borderWidth = 1.0
 //        cell.layer.borderColor = CGColor(red: 255.0, green: 255.0, blue: 255.0, alpha: 0)
 //        cell.layer.cornerRadius = 8.0
