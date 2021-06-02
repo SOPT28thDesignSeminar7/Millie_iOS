@@ -5,6 +5,7 @@
 //  Created by inae Lee on 2021/05/19.
 //
 
+import Kingfisher
 import SnapKit
 import UIKit
 
@@ -22,6 +23,7 @@ class InaeBookCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.NotoSansKR(type: .bold, size: 17)
         label.text = "넛지"
+        label.lineBreakMode = .byTruncatingTail
 
         return label
     }()
@@ -59,6 +61,8 @@ class InaeBookCell: UITableViewCell {
         label.font = UIFont.NotoSansKR(type: .regular, size: 14)
         label.text = "디폴트 옵션이 존재하지 않는다."
         label.textColor = UIColor.fontMainColor
+        label.numberOfLines = 2
+        label.lineBreakMode = .byTruncatingTail
 
         return label
     }()
@@ -115,6 +119,8 @@ extension InaeBookCell {
             make.top.equalToSuperview().inset(16.5)
             make.leading.equalToSuperview().inset(25)
             make.bottom.equalToSuperview().inset(93)
+            make.width.equalTo(111)
+            make.height.equalTo(159)
         }
 
         bookTitleLabel.snp.makeConstraints { make in
@@ -126,7 +132,7 @@ extension InaeBookCell {
             make.top.equalTo(bookTitleLabel.snp.bottom)
             make.leading.equalTo(bookImage.snp.trailing).inset(-14)
         }
-        
+
         quotationImage.snp.makeConstraints { make in
             make.top.equalTo(highlightLabel.snp.top).inset(4)
             make.leading.equalTo(authorLabel.snp.leading)
@@ -140,6 +146,7 @@ extension InaeBookCell {
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(highlightLabel.snp.bottom).inset(-11)
             make.leading.equalTo(quotationImage.snp.leading)
+            make.trailing.equalToSuperview().inset(10)
         }
 
         dateLabel.snp.makeConstraints { make in
@@ -155,6 +162,18 @@ extension InaeBookCell {
         shareButton.snp.makeConstraints { make in
             make.trailing.equalTo(likeButton.snp.leading).inset(-9)
             make.bottom.equalTo(likeButton.snp.bottom)
+        }
+    }
+
+    func setCell(book: BookDetail) {
+        bookImage.kf.setImage(with: URL(string: book.image))
+        bookTitleLabel.text = book.title
+        authorLabel.text = book.author
+        highlightLabel.text = "\(book.highlightCount)개의 하이라이트"
+
+        if let highlight = book.highlights.first {
+            descriptionLabel.text = highlight.highlightText
+            dateLabel.text = highlight.highlightDate
         }
     }
 }
