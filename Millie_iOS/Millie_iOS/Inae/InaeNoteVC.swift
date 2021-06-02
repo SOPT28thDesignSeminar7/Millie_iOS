@@ -21,6 +21,10 @@ class InaeNoteVC: UIViewController {
     @IBOutlet var goalLabel: UILabel!
     @IBOutlet var tableView: UITableView!
 
+    // MARK: - local variables
+
+    private var bookList: [BookDetail] = []
+
     // MARK: - UIComponents
 
     private lazy var headerView: UIView = {
@@ -98,6 +102,7 @@ class InaeNoteVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setBookData()
         setView()
         setTableView()
     }
@@ -106,6 +111,27 @@ class InaeNoteVC: UIViewController {
 // MARK: - Custom Methods
 
 extension InaeNoteVC {
+    func setBookData() {
+        InaeBookService.shared.getBooksData { response in
+            switch response {
+            case .success(let data):
+                guard let decodedData = data as? BookListDataModel<Book> else { return }
+                guard let books = decodedData.data?.books else { return }
+
+                self.bookList = books
+                self.tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .automatic)
+            case .requestErr(let msg):
+                print(msg)
+            case .pathErr:
+                print("path err")
+            case .serverErr:
+                print("server err")
+            case .networkFail:
+                print("network err")
+            }
+        }
+    }
+
     func setView() {
         /// navigation
         profileImage.image = UIImage(named: "img_profile")
@@ -164,7 +190,7 @@ extension InaeNoteVC {
 
 extension InaeNoteVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        bookList.count + 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -175,6 +201,7 @@ extension InaeNoteVC: UITableViewDataSource {
             return cell
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: InaeBookCell.identifier) as? InaeBookCell else { return UITableViewCell() }
+            cell.setCell(book: bookList[indexPath.row - 1])
 
             return cell
         }

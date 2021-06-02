@@ -13,6 +13,7 @@
 		48874083264FB02100997B82 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48874082264FB02100997B82 /* Feed.storyboard */; };
 		48874086264FB03600997B82 /* MyLibrary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48874085264FB03600997B82 /* MyLibrary.storyboard */; };
 		488F9FFE26552F8400D16876 /* commentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488F9FFD26552F8400D16876 /* commentTableViewCell.swift */; };
+		AB0E925E2667C44E00D56840 /* InaeBookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E925D2667C44E00D56840 /* InaeBookService.swift */; };
 		ABD5810E2654D06800DDB0D3 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABD5810D2654D06800DDB0D3 /* Lato-Bold.ttf */; };
 		ABD581112654D09F00DDB0D3 /* NotoSerifKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ABD581102654D09F00DDB0D3 /* NotoSerifKR-Medium.otf */; };
 		ABD581142654D39F00DDB0D3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */; };
@@ -58,6 +59,7 @@
 		48874082264FB02100997B82 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		48874085264FB03600997B82 /* MyLibrary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyLibrary.storyboard; sourceTree = "<group>"; };
 		488F9FFD26552F8400D16876 /* commentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentTableViewCell.swift; sourceTree = "<group>"; };
+		AB0E925D2667C44E00D56840 /* InaeBookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InaeBookService.swift; sourceTree = "<group>"; };
 		ABD5810D2654D06800DDB0D3 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		ABD581102654D09F00DDB0D3 /* NotoSerifKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSerifKR-Medium.otf"; sourceTree = "<group>"; };
 		ABD581132654D39F00DDB0D3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -159,6 +161,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AB0E925C2667C41F00D56840 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				AB0E925D2667C44E00D56840 /* InaeBookService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		ABDAD73026529FC800862243 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,13 +189,6 @@
 				ABDAD79026541DB900862243 /* InaeBookCell.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		ABDAD7462652A9C200862243 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		ABE44E81264FA96000E0FF56 = {
@@ -229,7 +232,7 @@
 		ABE44EA2264FAB4B00E0FF56 /* Inae */ = {
 			isa = PBXGroup;
 			children = (
-				ABDAD7462652A9C200862243 /* Model */,
+				AB0E925C2667C41F00D56840 /* Network */,
 				ABDAD7452652A9BB00862243 /* Cell */,
 				ABE44EB8264FAC3000E0FF56 /* InaeNoteVC.swift */,
 				ABDAD7472652B21200862243 /* InaeNote.storyboard */,
@@ -463,6 +466,7 @@
 				488F9FFE26552F8400D16876 /* commentTableViewCell.swift in Sources */,
 				48720B3A26663DEB0094FCFC /* GetHighlightDataService.swift in Sources */,
 				BB4E2F6C26649A0D00F46A87 /* NetworkResult.swift in Sources */,
+				AB0E925E2667C44E00D56840 /* InaeBookService.swift in Sources */,
 				ABE44E90264FA96000E0FF56 /* SceneDelegate.swift in Sources */,
 				BB4E2F622663FDBB00F46A87 /* APIConstants.swift in Sources */,
 				ABDAD79126541DB900862243 /* InaeBookCell.swift in Sources */,
@@ -617,7 +621,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
+				DEVELOPMENT_TEAM = G7SD8523Y3;
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -638,7 +642,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5GQ6QL9S3X;
+				DEVELOPMENT_TEAM = G7SD8523Y3;
 				INFOPLIST_FILE = Millie_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
