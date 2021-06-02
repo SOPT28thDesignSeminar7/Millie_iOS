@@ -21,13 +21,11 @@ class MyLibraryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        connectServer()
         
         let number  = setRandomNumber()
         numberOfPersonLikedLabel.text = "이 책에 하이라이트한 회원 " + String(number) + "명"
-        
-        
-        
+
         commentTableView.delegate = self
         commentTableView.dataSource = self
         commentTableView.separatorStyle = .none
@@ -82,22 +80,17 @@ extension MyLibraryViewController : UITableViewDelegate, UITableViewDataSource {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "commentTableViewCell" ,for: indexPath) as? commentTableViewCell else { return UITableViewCell() }
         
-        cell.layer.cornerRadius = 8.0
-        cell.layer.borderWidth = 1.0
-        cell.layer.borderColor = UIColor.gray.cgColor
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowRadius = 8.0
-        cell.layer.shadowOpacity = 0.15
-        cell.layer.masksToBounds = false
+        cell.shadowView.layer.cornerRadius = 8.0
+        cell.shadowView.layer.borderWidth = 1.0
+        cell.shadowView.layer.borderColor = UIColor.white.cgColor
+        cell.shadowView.layer.shadowColor = UIColor.black.cgColor
+        cell.shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.shadowView.layer.shadowRadius = 8.0
+        cell.shadowView.layer.shadowOpacity = 0.15
+        cell.shadowView.layer.masksToBounds = false
         
-        cell.dateLabel.text = hightlightArray[indexPath.row].highlightDate
-        cell.commentLabel.text = hightlightArray[indexPath.row].highlightText
-        
-//        cell.layer.borderWidth = 1.0
-//        cell.layer.borderColor = CGColor(red: 255.0, green: 255.0, blue: 255.0, alpha: 0)
-//        cell.layer.cornerRadius = 8.0
-//        cell.setShadow(radius: 8, offset: CGSize(width: 0, height: 0), opacity: 0.15, color: .black)
+        //cell.timeAnddateLabel.text = hightlightArray[indexPath.row].highlightDate
+        //cell.commentLabel.text = hightlightArray[indexPath.row].highlightText
         
         return cell
     }
