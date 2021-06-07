@@ -6,18 +6,15 @@
 //
 
 import UIKit
+
+import Kingfisher
 import SnapKit
 
 class RuheeNoteVC: UIViewController {
     
     //MARK: - Property
     
-    var bookListArray = [BookModel(image: "img_book_1", title: "넛지", author: "리처드 H.틸러",
-                                   higlightNumber: "2", description: "디폴트 옵션이 존재하지 않는다", date: "2021.02.04"),
-                         BookModel(image: "img_book_1", title: "넛지", author: "리처드 H.틸러",
-                                                        higlightNumber: "2", description: "디폴트 옵션이 존재하지 않는다", date: "2021.02.04"),
-                         BookModel(image: "img_book_1", title: "넛지", author: "리처드 H.틸러",
-                                                        higlightNumber: "2", description: "디폴트 옵션이 존재하지 않는다", date: "2021.02.04")]
+    var bookListArray : [BookDetail] = []
     
     let noteTableView = UITableView()
     
@@ -40,8 +37,10 @@ class RuheeNoteVC: UIViewController {
         noteTableView.register(BooklistmenuTableCell.self, forCellReuseIdentifier: "BooklistmenuTableCell")
         noteTableView.register(BooklistTableCell.self, forCellReuseIdentifier: "BooklistTableCell")
 
-        configureUI()
         
+        configureUI()
+        getData()
+
     }
     
     
@@ -66,6 +65,42 @@ class RuheeNoteVC: UIViewController {
             make.leading.bottom.trailing.equalToSuperview()
         }
      
+    }
+    
+    
+    //MARK: - getData
+    
+    func getData() {
+
+        GetBooklistDataService.shared.getBookInfo { (response) in
+            switch(response) {
+            
+            case .success(let bookData):
+                                
+                if let decodedData = bookData as? [BookDetail] {
+                    
+                    print("여긴가?",decodedData)
+                    
+
+                    self.bookListArray = decodedData
+                    self.noteTableView.reloadData()
+                    
+                    print("이게 리스트",self.bookListArray)
+                    
+                                
+                }
+                
+            case .requestErr(let bookData):
+                print("requestERR", bookData)
+            case .pathErr:
+                print("pathERR")
+            case .serverErr:
+                print("serverERR")
+            case .networkFail:
+                print("networkFail")
+            }
+            
+        }
     }
 }
 
@@ -148,8 +183,8 @@ extension RuheeNoteVC: UITableViewDataSource {
             
         default:
             // headerview 기준으로 나눠서 아래에 5개가 들어가는 이유는..
-            // 책이 3권 들어갈 경우... -> 기존 chipcell + booklistmenucell +3권(booklistcell)
-            return 5
+            // 책이 6권 들어갈 경우... -> 기존 chipcell + booklistmenucell +6권(booklistcell)
+            return bookListArray.count + 2
         }
     }
     
@@ -181,19 +216,18 @@ extension RuheeNoteVC: UITableViewDataSource {
                 
             } else {
                 guard let booklistCell = tableView.dequeueReusableCell(withIdentifier: "BooklistTableCell", for: indexPath) as? BooklistTableCell else { return UITableViewCell() }
-//                booklistCell.selectionStyle = .none
+                booklistCell.selectionStyle = .none
                 
-                // indexPath.row - 2를 해주는 이유 : 책이 들어가야 하는 곳은 bookListArray[2]부터니까.. 전체가 5면 2를 빼줌... 그래야 셀이 3개...
-                booklistCell.setData(bookcoverImage: bookListArray[indexPath.row-2].image,
-                                     bookTitle: bookListArray[indexPath.row-2].title,
+//                 indexPath.row - 2를 해주는 이유 : 책이 들어가야 하는 곳은 bookListArray[2]부터니까.. 전체가 8면 2를 빼줌... 그래야 셀이 6개...
+                booklistCell.setData(bookTitle: bookListArray[indexPath.row-2].title,
                                      bookAuthor: bookListArray[indexPath.row-2].author,
-                                     highlightNum: bookListArray[indexPath.row-2].higlightNumber,
-                                     bookDescription: bookListArray[indexPath.row-2].description,
-                                     uploadDate: bookListArray[indexPath.row-2].date)
+                                     bookHighlightCount: bookListArray[indexPath.row-2].highlightCount,
+                                     bookHighlight: bookListArray[indexPath.row-2].highlights.first!.highlightText,
+                                     bookDate: bookListArray[indexPath.row-2].highlights.first!.highlightDate,
+                                     bookCoverImage: bookListArray[indexPath.row-2].image)
                 
                 return booklistCell
             }
-         
             
         }
     }

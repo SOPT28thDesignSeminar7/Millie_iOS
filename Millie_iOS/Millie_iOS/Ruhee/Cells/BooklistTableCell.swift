@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+import Kingfisher
 import SnapKit
 
 class BooklistTableCell: UITableViewCell {
@@ -17,6 +19,10 @@ class BooklistTableCell: UITableViewCell {
     let bookImage : UIImageView = {
         let image = UIImageView()
         image.image = UIImage(named: "img_book_1")
+        image.layer.shadowRadius = 5
+        image.layer.shadowColor = UIColor.black.cgColor
+        image.layer.shadowOpacity = 0.1
+        image.layer.shadowOffset = CGSize(width: 2, height: 2)
         return image
     }()
     
@@ -60,9 +66,10 @@ class BooklistTableCell: UITableViewCell {
     
     let describeLabel : UILabel = {
         let label = UILabel()
-        label.text = "디폴트 옵션이 존재하지 않는다."
+//        label.text = "디폴트 옵션이 존재하지 않는다."
         label.font = UIFont.NotoSansKR(type: .regular, size: 14)
         label.textColor = UIColor(white: 85.0 / 255.0, alpha: 1.0)
+        label.numberOfLines = 2
         return label
     }()
     
@@ -116,11 +123,14 @@ class BooklistTableCell: UITableViewCell {
         bookImage.snp.makeConstraints { (make) in
             make.top.equalTo(16.5)
             make.leading.equalTo(25)
+            make.height.equalTo(149)
+            make.width.equalTo(101)
         }
         
         booktitleLabel.snp.makeConstraints { (make) in
             make.top.equalTo(17)
             make.leading.equalTo(bookImage.snp.trailing).offset(14)
+            make.trailing.equalTo(-29)
         }
         
         authorLabel.snp.makeConstraints { (make) in
@@ -146,6 +156,7 @@ class BooklistTableCell: UITableViewCell {
         describeLabel.snp.makeConstraints { (make) in
             make.top.equalTo(numberofHighlightLabel.snp.bottom).offset(11)
             make.leading.equalTo(bookImage.snp.trailing).offset(14)
+            make.trailing.equalTo(-29)
         }
         
         dateLabel.snp.makeConstraints { (make) in
@@ -188,19 +199,25 @@ class BooklistTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setData(bookcoverImage: String, bookTitle: String, bookAuthor: String,
-                 highlightNum: String, bookDescription: String, uploadDate: String) {
-        
-        if let image = UIImage(named: bookcoverImage) {
-            bookImage.image = image
-        }
-        
+    func setData(bookTitle: String,
+                 bookAuthor: String,
+                 bookHighlightCount: Int,
+                 bookHighlight: String,
+                 bookDate: String,
+                 bookCoverImage: String) {
+
         booktitleLabel.text = bookTitle
         authorLabel.text = bookAuthor
-        numberofHighlightLabel.text = highlightNum
-        describeLabel.text = bookDescription
-        dateLabel.text = uploadDate
+        numberofHighlightLabel.text = String(bookHighlightCount)
+        describeLabel.text = bookHighlight
+        dateLabel.text = bookDate
+
+        if let image = URL(string: bookCoverImage) {
+            bookImage.kf.setImage(with: image)
+        }
         
     }
+    
+
 
 }
