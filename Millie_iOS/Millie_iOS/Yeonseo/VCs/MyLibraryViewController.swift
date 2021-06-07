@@ -55,6 +55,18 @@ class MyLibraryViewController: UIViewController {
                     self.booknameLabel.text = data.title
                     self.numberLabel.text = String(data.highlightCount)
                     self.hightlightArray = data.highlights
+                    
+                    let url = URL(string: data.image)
+                    var image : UIImage?
+                    DispatchQueue.global().async {
+                        let data = try? Data(contentsOf: url!)
+                        DispatchQueue.main.async {
+                            //image = UIImage(data: data!)
+                            self.bookimage.image = UIImage(data: data!)
+                            
+                        }
+                    }
+
 //                    self.bookimage.image = UIImage(: data.image)
                     
                     self.commentTableView.reloadData()
