@@ -10,7 +10,6 @@ import Alamofire
 
 struct GetHighlightDataService {
     static let shared = GetHighlightDataService()
-    let bookID = 0
     
     func getHighlightInfo(completion: @escaping (NetworkResult<Any>) -> Void)
     {

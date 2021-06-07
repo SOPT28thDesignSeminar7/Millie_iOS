@@ -140,21 +140,21 @@ extension RuheeNoteVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.section {
-        case 0:
-            print("선택안함 - profile cell")
+        case 0: break
             
         default:
             if indexPath.row == 0 {
-                print("선택안함 - chip cell")
+                break
                 
             } else if indexPath.row == 1 {
-                print("선택안함 - booklistmenu cell")
+                break
                 
             } else {
-                print("booklist cell")
                 let storyboard = UIStoryboard(name: "MyLibrary", bundle: nil)
                 guard let nextVC = storyboard.instantiateViewController(identifier: "MyLibraryViewController")
                         as? MyLibraryViewController else { return }
+                
+                nextVC.bookID = bookListArray[indexPath.row-2].id
                 
                 self.navigationController?.pushViewController(nextVC, animated: true)
                 

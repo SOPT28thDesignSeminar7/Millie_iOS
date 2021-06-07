@@ -17,6 +17,9 @@ class MyLibraryViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var highLightLabel: UILabel!
     @IBOutlet weak var bookimage: UIImageView!
+    
+    var bookID = ""
+    
     var hightlightArray : [BookListHighlight] = []
     
     override func viewDidLoad() {
@@ -63,10 +66,9 @@ class MyLibraryViewController: UIViewController {
                         DispatchQueue.main.async {
                             //image = UIImage(data: data!)
                             self.bookimage.image = UIImage(data: data!)
-                            
                         }
                     }
-
+                    
 //                    self.bookimage.image = UIImage(: data.image)
                     
                     self.commentTableView.reloadData()
