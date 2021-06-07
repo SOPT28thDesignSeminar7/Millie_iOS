@@ -14,8 +14,8 @@ struct GetHighlightDataService {
     
     func getHighlightInfo(completion: @escaping (NetworkResult<Any>) -> Void)
     {
-        //let URL = APIConstants.baseURL + APIConstants.highlightsURL + String(bookID)
-        let URL = "3.36.64.41:5000/api/highlights/:60aef9aa1469fa2eefd0a4c0"
+//        let URL = APIConstants.baseURL + APIConstants.highlightsURL + String(bookID)
+        let URL = "http://3.36.64.41:5000/api/highlights/60aef9aa1469fa2eefd0a4c0"
         let header : HTTPHeaders = ["Content-type" : "application/json"]
         
         let dataRequest = AF.request(URL,
@@ -28,7 +28,6 @@ struct GetHighlightDataService {
             
             switch dataResponse.result {
             case .success:
-                
                 guard let statusCode = dataResponse.response?.statusCode else {return}
                 guard let value = dataResponse.value else {return}
                 let networkResult = self.judgeStatus(by: statusCode, value)
@@ -44,11 +43,10 @@ struct GetHighlightDataService {
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         
         switch statusCode {
-        
-        case 200: return isValidData(data: data)
-        case 400: return .pathErr
-        case 500: return .serverErr
-        default: return .networkFail
+            case 200: return isValidData(data: data)
+            case 400: return .pathErr
+            case 500: return .serverErr
+            default: return .networkFail
         }
     }
     

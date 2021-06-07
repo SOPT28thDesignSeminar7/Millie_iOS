@@ -55,7 +55,9 @@ class MyLibraryViewController: UIViewController {
                     self.booknameLabel.text = data.title
                     self.numberLabel.text = String(data.highlightCount)
                     self.hightlightArray = data.highlights
-                    //self.bookimage.image = UIImage(: data.image)
+//                    self.bookimage.image = UIImage(: data.image)
+                    
+                    self.commentTableView.reloadData()
                 }
             case .requestErr(let message) :
                 print("requestERR",message)
@@ -73,7 +75,7 @@ class MyLibraryViewController: UIViewController {
 extension MyLibraryViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return hightlightArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -89,8 +91,8 @@ extension MyLibraryViewController : UITableViewDelegate, UITableViewDataSource {
         cell.shadowView.layer.shadowOpacity = 0.15
         cell.shadowView.layer.masksToBounds = false
         
-        //cell.timeAnddateLabel.text = hightlightArray[indexPath.row].highlightDate
-        //cell.commentLabel.text = hightlightArray[indexPath.row].highlightText
+        cell.timeAnddateLabel.text = hightlightArray[indexPath.row].highlightDate
+        cell.commentLabel.text = hightlightArray[indexPath.row].highlightText
         
         return cell
     }
