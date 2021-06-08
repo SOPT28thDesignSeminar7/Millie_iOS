@@ -18,7 +18,7 @@ class MyLibraryViewController: UIViewController {
     @IBOutlet weak var highLightLabel: UILabel!
     @IBOutlet weak var bookimage: UIImageView!
     
-    var bookID = ""
+    var bookID : String?
     
     var hightlightArray : [BookListHighlight] = []
     
@@ -27,7 +27,7 @@ class MyLibraryViewController: UIViewController {
         connectServer()
         
         let number  = setRandomNumber()
-        numberOfPersonLikedLabel.text = "이 책에 하이라이트한 회원 " + String(number) + "명"
+        numberOfPersonLikedLabel.text = "이 책에 하이라이트한 회원 " + " " + String(number) + "명"
 
         commentTableView.delegate = self
         commentTableView.dataSource = self
@@ -37,6 +37,7 @@ class MyLibraryViewController: UIViewController {
         numberOfPersonLikedLabel.font = UIFont.NotoSansKR(type: .medium, size: 14)
         numberLabel.font = UIFont.Lato(type: .bold, size: 19)
         highLightLabel.font = UIFont.NotoSansKR(type: .regular, size: 12)
+
         
     }
     
@@ -49,10 +50,12 @@ class MyLibraryViewController: UIViewController {
         return number
     }
     
+    
     func connectServer(){
-        GetHighlightDataService.shared.getHighlightInfo{ (response) in
+        GetHighlightDataService.shared.getHighlightInfo(bookID: bookID!){ (response) in
             switch(response)
             {
+            
             case .success(let hightlightData):
                 if let data = hightlightData as? BookDetail {
                     self.booknameLabel.text = data.title
@@ -60,16 +63,10 @@ class MyLibraryViewController: UIViewController {
                     self.hightlightArray = data.highlights
                     
                     let url = URL(string: data.image)
-                    var image : UIImage?
-                    DispatchQueue.global().async {
+                    DispatchQueue.main.async {
                         let data = try? Data(contentsOf: url!)
-                        DispatchQueue.main.async {
-                            //image = UIImage(data: data!)
-                            self.bookimage.image = UIImage(data: data!)
-                        }
+                        self.bookimage.image = UIImage(data: data!)
                     }
-                    
-//                    self.bookimage.image = UIImage(: data.image)
                     
                     self.commentTableView.reloadData()
                 }
@@ -95,6 +92,9 @@ extension MyLibraryViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "commentTableViewCell" ,for: indexPath) as? commentTableViewCell else { return UITableViewCell() }
+        
+        cell.timeAnddateLabel.font =  UIFont.Lato(type: .regular, size: 15)
+        cell.commentLabel.font =  UIFont.NotoSerifKR(type: .medium, size: 16)
         
         cell.shadowView.layer.cornerRadius = 8.0
         cell.shadowView.layer.borderWidth = 1.0
