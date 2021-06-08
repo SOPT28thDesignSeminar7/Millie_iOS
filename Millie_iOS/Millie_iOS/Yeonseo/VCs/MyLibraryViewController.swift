@@ -17,17 +17,18 @@ class MyLibraryViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var highLightLabel: UILabel!
     @IBOutlet weak var bookimage: UIImageView!
+    
+    var bookID : String?
+    
     var hightlightArray : [BookListHighlight] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        connectServer()
         
         let number  = setRandomNumber()
-        numberOfPersonLikedLabel.text = "이 책에 하이라이트한 회원 " + String(number) + "명"
-        
-        
-        
+        numberOfPersonLikedLabel.text = "이 책에 하이라이트한 회원 " + " " + String(number) + "명"
+
         commentTableView.delegate = self
         commentTableView.dataSource = self
         commentTableView.separatorStyle = .none
@@ -36,6 +37,7 @@ class MyLibraryViewController: UIViewController {
         numberOfPersonLikedLabel.font = UIFont.NotoSansKR(type: .medium, size: 14)
         numberLabel.font = UIFont.Lato(type: .bold, size: 19)
         highLightLabel.font = UIFont.NotoSansKR(type: .regular, size: 12)
+
         
     }
     
@@ -48,16 +50,25 @@ class MyLibraryViewController: UIViewController {
         return number
     }
     
+    
     func connectServer(){
-        GetHighlightDataService.shared.getHighlightInfo{ (response) in
+        GetHighlightDataService.shared.getHighlightInfo(bookID: bookID!){ (response) in
             switch(response)
             {
+            
             case .success(let hightlightData):
                 if let data = hightlightData as? BookDetail {
                     self.booknameLabel.text = data.title
                     self.numberLabel.text = String(data.highlightCount)
                     self.hightlightArray = data.highlights
-                    //self.bookimage.image = UIImage(: data.image)
+                    
+                    let url = URL(string: data.image)
+                    DispatchQueue.main.async {
+                        let data = try? Data(contentsOf: url!)
+                        self.bookimage.image = UIImage(data: data!)
+                    }
+                    
+                    self.commentTableView.reloadData()
                 }
             case .requestErr(let message) :
                 print("requestERR",message)
@@ -75,29 +86,27 @@ class MyLibraryViewController: UIViewController {
 extension MyLibraryViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return hightlightArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "commentTableViewCell" ,for: indexPath) as? commentTableViewCell else { return UITableViewCell() }
         
-        cell.layer.cornerRadius = 8.0
-        cell.layer.borderWidth = 1.0
-        cell.layer.borderColor = UIColor.gray.cgColor
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowRadius = 8.0
-        cell.layer.shadowOpacity = 0.15
-        cell.layer.masksToBounds = false
+        cell.timeAnddateLabel.font =  UIFont.Lato(type: .regular, size: 15)
+        cell.commentLabel.font =  UIFont.NotoSerifKR(type: .medium, size: 16)
         
-        cell.dateLabel.text = hightlightArray[indexPath.row].highlightDate
+        cell.shadowView.layer.cornerRadius = 8.0
+        cell.shadowView.layer.borderWidth = 1.0
+        cell.shadowView.layer.borderColor = UIColor.white.cgColor
+        cell.shadowView.layer.shadowColor = UIColor.black.cgColor
+        cell.shadowView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        cell.shadowView.layer.shadowRadius = 8.0
+        cell.shadowView.layer.shadowOpacity = 0.15
+        cell.shadowView.layer.masksToBounds = false
+        
+        cell.timeAnddateLabel.text = hightlightArray[indexPath.row].highlightDate
         cell.commentLabel.text = hightlightArray[indexPath.row].highlightText
-        
-//        cell.layer.borderWidth = 1.0
-//        cell.layer.borderColor = CGColor(red: 255.0, green: 255.0, blue: 255.0, alpha: 0)
-//        cell.layer.cornerRadius = 8.0
-//        cell.setShadow(radius: 8, offset: CGSize(width: 0, height: 0), opacity: 0.15, color: .black)
         
         return cell
     }

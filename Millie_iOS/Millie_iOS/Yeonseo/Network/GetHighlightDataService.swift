@@ -10,11 +10,10 @@ import Alamofire
 
 struct GetHighlightDataService {
     static let shared = GetHighlightDataService()
-    let bookID = 0
     
-    func getHighlightInfo(completion: @escaping (NetworkResult<Any>) -> Void)
+    func getHighlightInfo(bookID: String? ,completion: @escaping (NetworkResult<Any>) -> Void)
     {
-        let URL = APIConstants.baseURL + APIConstants.highlightsURL + String(bookID)
+        let URL = APIConstants.highlightsURL + "/" + bookID!
         let header : HTTPHeaders = ["Content-type" : "application/json"]
         
         let dataRequest = AF.request(URL,
@@ -27,7 +26,6 @@ struct GetHighlightDataService {
             
             switch dataResponse.result {
             case .success:
-                
                 guard let statusCode = dataResponse.response?.statusCode else {return}
                 guard let value = dataResponse.value else {return}
                 let networkResult = self.judgeStatus(by: statusCode, value)
@@ -43,11 +41,10 @@ struct GetHighlightDataService {
     private func judgeStatus(by statusCode: Int, _ data: Data) -> NetworkResult<Any> {
         
         switch statusCode {
-        
-        case 200: return isValidData(data: data)
-        case 400: return .pathErr
-        case 500: return .serverErr
-        default: return .networkFail
+            case 200: return isValidData(data: data)
+            case 400: return .pathErr
+            case 500: return .serverErr
+            default: return .networkFail
         }
     }
     
