@@ -38,7 +38,7 @@ class MyLibraryViewController: UIViewController {
         numberLabel.font = UIFont.Lato(type: .bold, size: 19)
         highLightLabel.font = UIFont.NotoSansKR(type: .regular, size: 12)
 
-        
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
     }
     
     @IBAction func likeButtonTapped(sender: UIButton) {
